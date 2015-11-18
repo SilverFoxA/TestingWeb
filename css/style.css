@@ -109,7 +109,9 @@ html {
 }
 
 body {
-  padding: 2rem;
+/*  padding: 2rem;*/
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
 h5 {
