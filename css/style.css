@@ -83,8 +83,9 @@ ul.hidden-links {
 
 ul.hidden-links li a {
   color: #404040;
-    text-decoration: none;
+  text-decoration: none;
   padding-right: 1rem;
+
 }
 
 ul.hidden-links.hidden {
