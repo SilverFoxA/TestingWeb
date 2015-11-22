@@ -75,6 +75,10 @@
 		/* Section 1
 		 * --------------------------------------- */
 		#section0{
+            position: relative;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
 			background-color: #BFDA00;
 		}
 		#section0 h1{
@@ -130,6 +134,7 @@
 		<div class="content">
 			<h1>Team Krishna</h1>
 			<p>Redifining education with the promise of freedom.</p>
+
 		</div>
 	</div>
 	<div class="section" id="section1">
@@ -256,5 +261,21 @@
 
 
       </script>
+
+      <script>
+//Array of images which you want to show: Use path you want.
+var images=new Array('img/first.png','img/second.png','img/third.png','img/four.png');
+var nextimage=0;
+doSlideshow();
+
+function doSlideshow(){
+    if(nextimage>=images.length){nextimage=0;}
+    $('#section0')
+    .css('background-image','url("'+images[nextimage++]+'")')
+    .fadeIn(500,function(){
+        setTimeout(doSlideshow,2000);
+    });
+}
+</script>
   </body>
 </html>
