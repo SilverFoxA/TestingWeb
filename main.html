@@ -1,10 +1,13 @@
-<html>
-<head><title>TeamKrishna - Redifining education</title>
-
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Testing website</title>
+    <link rel="stylesheet" href="css/reset.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
-    	<link rel="stylesheet" type="text/css" href="javascript.fullPage.css" />
-</head>
+      	<link rel="stylesheet" type="text/css" href="javascript.fullPage.css" />
+  </head>
 
 	<style>
 		/* Reset CSS
@@ -56,14 +59,14 @@
 			color: #F2F2F2;
 		}
 		h1{
-			font-size: 3em;
+			font-size: 3.5em;
 		}
 		p{
 			font-size: 1em;
 		}
 		.content{
 			position: relative;
-			top: 30%;
+			top: 40%;
             font-size: 20px;
 /*			transform: translateY(-50%);*/
 			text-align: center;
@@ -107,31 +110,151 @@
 		#section2 p{
 			opacity: 0.6;
 		}
-    #some {
-    bottom: 0;
-    left: 0;
-  }
 	</style>
-<body>
-    <div id="fullpage">
+  <body>
+
+       <nav class='greedy' style="margin:0px;">
+  <h1 id="tag">TeamKrishna</h1>
+  <ul class='links'>
+    <li><a href='#firstPage'>Home</a></li>
+    <li><a href='#secondPage'>About Us</a></li>
+    <li><a href='#3rdPage'>Team</a></li>
+    <li><a href='#4thpage'>Updates</a></li>
+    <li><a href='#lastPage'>Contact Us</a></li>
+  </ul>
+  <button>MENU</button>
+  <ul class='hidden-links hidden'></ul>
+</nav>
+      <div id="fullpage">
 	<div class="section " id="section0">
 		<div class="content">
 			<h1>Team Krishna</h1>
 			<p>Redifining education with the promise of freedom.</p>
-           <br><br>
-            <font  id="some" size="4" style="margin-top:90%; text-align:center; margin-top:20px;"><a href="index.html">Enter the website</a></font>
-
 		</div>
 	</div>
-    </div>
-    <script type="text/javascript" src="javascript.fullPage.js"></script>
+	<div class="section" id="section1">
+		<div class="slide" id="slide1">
+			<div class="content">
+				<h1>No need for jQuery</h1>
+				<p>
+					5 Kb gzipped!!
+				</p>
+				<p>
+		      		Improve the loading time of your site!
+				</p>
+			</div>
+		</div>
+		<div class="slide" id="slide2">
+			<div class="content">
+				<h1>Slides too!</h1>
+			</div>
+		</div>
+		<div class="slide" id="slide2">
+			<div class="content">
+				<h1>More slides!</h1>
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="content">
+			<h1>Compatible</h1>
+			<p>IE 8+ support.</p>
+		</div>
+	</div>
+          <div class="section" id="section3">
+		<div class="content">
+			<h1>Something</h1>
+		</div>
+	</div>
+          <div class="section" id="section4">
+		<div class="content">
+			<h1>Compatible</h1>
+			<p>IE 8+ support.</p>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="javascript.fullPage.js"></script>
 <script type="text/javascript">
 	fullpage.initialize('#fullpage', {
-		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage','last'],
 		menu: '#menu',
 		css3:true
 	});
 
 </script>
-</body>
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="js/index.js"></script>
+<script type="application/javascript">
+      (function() {
+
+	function Slideshow( element ) {
+		this.el = document.querySelector( element );
+		this.init();
+	}
+
+	Slideshow.prototype = {
+		init: function() {
+			this.wrapper = this.el.querySelector( ".slider-wrapper" );
+			this.slides = this.el.querySelectorAll( ".slide" );
+			this.previous = this.el.querySelector( ".slider-previous" );
+			this.next = this.el.querySelector( ".slider-next" );
+			this.index = 0;
+			this.total = this.slides.length;
+			this.timer = null;
+
+			this.action();
+			this.stopStart();
+		},
+		_slideTo: function( slide ) {
+			var currentSlide = this.slides[slide];
+			currentSlide.style.opacity = 1;
+
+			for( var i = 0; i < this.slides.length; i++ ) {
+				var slide = this.slides[i];
+				if( slide !== currentSlide ) {
+					slide.style.opacity = 0;
+				}
+			}
+		},
+		action: function() {
+			var self = this;
+			self.timer = setInterval(function() {
+				self.index++;
+				if( self.index == self.slides.length ) {
+					self.index = 0;
+				}
+				self._slideTo( self.index );
+
+			}, 3000);
+		},
+		stopStart: function() {
+			var self = this;
+			self.el.addEventListener( "mouseover", function() {
+				clearInterval( self.timer );
+				self.timer = null;
+
+			}, false);
+			self.el.addEventListener( "mouseout", function() {
+				self.action();
+
+			}, false);
+		}
+
+
+	};
+
+	document.addEventListener( "DOMContentLoaded", function() {
+
+		var slider = new Slideshow( "#main-slider" );
+
+	});
+
+
+})();
+
+
+      </script>
+  </body>
 </html>
