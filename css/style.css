@@ -1,9 +1,11 @@
 nav.greedy {
-  position: relative;
+  position: absolute;
+  width: 100%;
   height: 60px;
   display: flex;
   align-items: center;
-    background-color: transparent;
+    z-index: 100;
+    padding-right: 10px;
 /*  background: #ff9800;*/
 }
 
@@ -32,7 +34,7 @@ nav.greedy button {
 
 nav.greedy button.hidden {
   transition: none;
-  border-right: 0.5rem solid #fff;
+  border-right: 0.5rem;
 /*    make it transparent*/
   width: 0;
   padding: 0;
@@ -132,4 +134,43 @@ html {
   width: 100%;
   height: 100%;
   font-family: Helvetica, sans-serif;
+}
+
+.slider {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.slider-wrapper {
+	width: 95%;
+	height: 90%;
+	position: absolute;
+}
+
+.slide {
+	float: left;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 3s linear;
+}
+
+.slider-wrapper > .slide:first-child {
+	opacity: 1;
+}
+
+#main-slider {
+    width: 100%;
+    height: 100%;
+}
+
+#tag {
+    font-size: 30px;
+}
+
+.section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
