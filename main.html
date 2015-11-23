@@ -117,199 +117,7 @@
 		}
 		
 		/*component*/
-.navbar.slide-tab{
-  border:0;
-  border-radius:0;
-  border-bottom:2px solid #d62400;
-  color:#fff;
-  min-height:0!important;
-  position:relative;
-  z-index:2;
-}
-.navbar.navbar-default.slide-tab{
-  background:none;
-}
-.navbar.slide-tab .navbar-nav{
-  text-transform:uppercase;
-  letter-spacing:.9px;
-  font-weight:600;
-  font-size:1.3rem;
-  -webkit-transition:background-size .3s;
-  background: -webkit-linear-gradient(rgba(214,36,0,1) 1%, rgba(214,36,0,1) 100%);
-background: -moz-linear-gradient(rgba(214,36,0,1) 1%, rgba(214,36,0,1) 100%);
-background: -o-linear-gradient(rgba(214,36,0,1) 1%, rgba(214,36,0,1) 100%);
-background: linear-gradient(rgba(214,36,0,1) 1%, rgba(214,36,0,1) 100%);
-  background-size:0;
-  background-position:0 0;
-  background-repeat:no-repeat;
-}
-.navbar.slide-tab .navbar-nav > li > a,
-.navbar.slide-tab .navbar-nav > li > a:hover,
-.navbar.slide-tab .navbar-nav > li > a:focus{
-  background:none;
-  color:inherit;
-  -webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;
-}
-@-webkit-keyframes upTab{
-  0%{
-    background-position:-50px;
-    background-size:0;
-   background-position:center 50px;
-  }
-  100%{
-    background-position:0;
-    background-size:200px;
-    background-position:center center;
-  }
-}
-
-.navbar.slide-tab .navbar-nav > li.active > a{
-  color:#fff;
-background: -webkit-linear-gradient(rgba(214,36,0,1) 1%, rgba(214,36,0,1) 100%);
-background: -moz-linear-gradient(rgba(214,36,0,1) 1%, rgba(214,36,0,1) 100%);
-background: -o-linear-gradient(rgba(214,36,0,1) 1%, rgba(214,36,0,1) 100%);
-background: linear-gradient(rgba(214,36,0,1) 1%, rgba(214,36,0,1) 100%);
-background-position:0 0;
-  background-repeat:no-repeat;
-  -webkit-animation:upTab .3s;
-}
-.navbar.slide-tab .navbar-nav > li a{
-  padding:2rem 3rem;
-}
-
-.layer{
-  background:rgba(0,0,0,0.8);
-  height:100%;
-}
-
-.container-fluid.scroll{
-  overflow-x:scroll;
-}
-.breakscroll{
-  width:500vw; /*swapping to dynamic js*/
-  margin:0!important;
-}
-.breakscroll li{
-  display:inline-block!important;
-  white-space:nowrap;
-}
-/*hide scrollbar*/
-.invisibar::-webkit-scrollbar {
-    height:0px;
-}
-.control{
-  position:absolute;
-  right:0;
-  top:0;
-  background:rgba(0,0,0,0.95);
-  height:100%;
-  margin:0;
-  padding:0;
-}
-.control li{
-  list-style:none;
-  float:left;
-  padding-top: 10px;
-padding-bottom: 10px;
-line-height: 28px;
-  font-size:1.4em;
-  padding-left:15px;
-  padding-right:10px;
-}
-.control li span:not(.muted){
-  color:#eee!important;
-}
-.muted{
-  color:#666!important;
-  opacity:0.6;
-}
-.hotspots .hotspot{
-  width:50%;
-  padding-bottom:50%;
-  position:absolute;
-  top:0;
-  float:left;
-  z-index:1;
-}
-.hotspots .hotspot > .hotspot{
-  padding:0;
-  height:100%;
-  width:10%;
-  position:absolute;
-  border:0;
-  outline:0;
-}
-.hotspots.verbose .hotspot[data="left"]{
-  background:rgba(255, 0, 0, 0.15);
-  left:0;
-}
-.hotspots.verbose .hotspot[data="right"]{
-  background:rgba(0, 0, 255, 0.15);
-  right:0;
-}
-
-/*this is where im tierd and will need to change it*/
-.panes.breakscroll{
-  width:9999vw!important;
-}
-.panes > .content{
-  min-height:100vh;
-  height:100%;
-  width:calc(100vw);
-  float:left;
-}
-.dash{
-  width:100%;
-  overflow:hidden;
-  overflow-x:scroll;
-  margin-top:-81.4px;
-}
-
-.hotspot{
-  position:absolute;
-  z-index:1;
-  top:72px;
-  left:0;
-  width:100%;
-  height:100%;
-}
-.hotspot > .half{
-  width:50%;
-  float:left;
-  height:100%;
-}
-.click{
-  width:5rem;
-  height:100%;
-  border:0;
-  outline:0;
-  opacity:0.0;
-}
-.half[data="left"] .click{
-  float:left;
-}
-.half[data="right"] .click{
-  float:right;
-}
-
-.inner{
-  margin-top:80px;
-}
-.slot{
-  list-style:none!important;
-}
-.icon{
-  background:#333;
-  color:#fff;
-  margin:4.1%;
-}
-
-/*from my responsive bootstrap proportions pen*/
-/* http://codepen.io/rare_and_square/pen/yyNXjw */
-[class*="ratio"]{position:relative}[class*="ratio"]>div,[class*="ratio"]>section,[class*="ratio"]>article,[class*="ratio"]>header,[class*="ratio"]>footer{position:absolute;left:0;top:0;width:100%;height:100%}.col-md-1.ratio-1\:1{padding-bottom:8.333333335%}.col-md-2.ratio-1\:1{padding-bottom:16.66666667%}.col-md-3.ratio-1\:1{padding-bottom:25%}.col-md-4.ratio-1\:1{padding-bottom:33.33333333%}.col-md-5.ratio-1\:1{padding-bottom:41.66666667%}.col-md-6.ratio-1\:1{padding-bottom:50%}.col-md-7.ratio-1\:1{padding-bottom:58.33333333%}.col-md-8.ratio-1\:1{padding-bottom:66.66666667%}.col-md-9.ratio-1\:1{padding-bottom:75%}.col-md-10.ratio-1\:1{padding-bottom:83.33333333%}.col-md-11.ratio-1\:1{padding-bottom:91.66666667%}.col-md-12.ratio-1\:1{padding-bottom:100%}.col-md-1.ratio-2\:1{padding-bottom:4.1666666675%}.col-md-2.ratio-2\:1{padding-bottom:8.333333335%}.col-md-3.ratio-2\:1{padding-bottom:12.5%}.col-md-4.ratio-2\:1{padding-bottom:16.666666665%}.col-md-5.ratio-2\:1{padding-bottom:20.833333335%}.col-md-6.ratio-2\:1{padding-bottom:25%}.col-md-7.ratio-2\:1{padding-bottom:29.166666665%}.col-md-8.ratio-2\:1{padding-bottom:33.333333335%}.col-md-9.ratio-2\:1{padding-bottom:37.5%}.col-md-10.ratio-2\:1{padding-bottom:41.666666665%}.col-md-11.ratio-2\:1{padding-bottom:45.833333335%}.col-md-12.ratio-2\:1{padding-bottom:50%}.col-md-1.ratio-3\:1{padding-bottom:2.777777778333333%}.col-md-2.ratio-3\:1{padding-bottom:5.555555556666667%}.col-md-3.ratio-3\:1{padding-bottom:8.333333333333333%}.col-md-4.ratio-3\:1{padding-bottom:11.11111111%}.col-md-5.ratio-3\:1{padding-bottom:13.88888889%}.col-md-6.ratio-3\:1{padding-bottom:16.66666666666667%}.col-md-7.ratio-3\:1{padding-bottom:19.44444444333333%}.col-md-8.ratio-3\:1{padding-bottom:22.22222222333333%}.col-md-9.ratio-3\:1{padding-bottom:25%}.col-md-10.ratio-3\:1{padding-bottom:27.77777777666667%}.col-md-11.ratio-3\:1{padding-bottom:30.55555555666667%}.col-md-12.ratio-3\:1{padding-bottom:33.33333333333333%}
-	</style>
+</style>
   <body>
 
        <nav class='greedy' style="margin:0px;">
@@ -333,48 +141,10 @@ line-height: 28px;
 		</div>
 	</div>
 	<div class="section" id="section1">
-		<div class="layer">
-<nav class="navbar navbar-default slide-tab" role="navigation">
-  <div class="container-fluid scroll invisibar">
-      <ul class="nav navbar-nav breakscroll">
-        <li class="active"><a href="#">Foo</a></li>
-        <li><a href="#">Bar</a></li>
-        <li><a href="#">Thunder</a></li>
-        <li><a href="#">Flash</a></li>
-        <li><a href="#">Hotdog</a></li>
-        <li><a href="#">Bar</a></li>
-        <li><a href="#">Thunder</a></li>
-        <li><a href="#">Flash</a></li>
-        <li><a href="#">Hotdog</a></li>
-        <li><a href="#">Bar</a></li>
-        <li><a href="#">Thunder</a></li>
-        <li><a href="#">Flash</a></li>
-        <li><a href="#">Hotdog</a></li>
-        <li><a href="#">Bar</a></li>
-        <li><a href="#">Thunder</a></li>
-        <li><a href="#">Flash</a></li>
-        <li><a href="#">Hotdog</a></li>
-    </ul> 
-  </div>
-  <ul class="control">
-      <li><span class="glyphicon glyphicon-search"></span></li>
-      <li><span class="glyphicon glyphicon-align-justify muted"></span></li>
-  </ul>
-</nav>
-  <div class="hotspot">
-    <div class="half slide" data="left">
-      <button class="click"></button>
-    </div>
-    <div class="half slide" data="right">
-      <button class="click"></button>
-    </div>
-  </div>
-  <div class="dash scroll invisibar">
-    <div class="panes breakscroll">
-    
-    </div>
-  </div>
-</div>
+		<div class="content">
+			<h1>Compatible</h1>
+			<p>IE 8+ support.</p>
+		</div>
 	</div>
 	<div class="section" id="section2">
 		<div class="content">
@@ -407,76 +177,76 @@ line-height: 28px;
 
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="js/index.js"></script>
-<script type="application/javascript">
-      (function() {
+<!--<script type="application/javascript">-->
+<!--      (function() {-->
 
-	function Slideshow( element ) {
-		this.el = document.querySelector( element );
-		this.init();
-	}
+<!--	function Slideshow( element ) {-->
+<!--		this.el = document.querySelector( element );-->
+<!--		this.init();-->
+<!--	}-->
 
-	Slideshow.prototype = {
-		init: function() {
-			this.wrapper = this.el.querySelector( ".slider-wrapper" );
-			this.slides = this.el.querySelectorAll( ".slide" );
-			this.previous = this.el.querySelector( ".slider-previous" );
-			this.next = this.el.querySelector( ".slider-next" );
-			this.index = 0;
-			this.total = this.slides.length;
-			this.timer = null;
+<!--	Slideshow.prototype = {-->
+<!--		init: function() {-->
+<!--			this.wrapper = this.el.querySelector( ".slider-wrapper" );-->
+<!--			this.slides = this.el.querySelectorAll( ".slide" );-->
+<!--			this.previous = this.el.querySelector( ".slider-previous" );-->
+<!--			this.next = this.el.querySelector( ".slider-next" );-->
+<!--			this.index = 0;-->
+<!--			this.total = this.slides.length;-->
+<!--			this.timer = null;-->
 
-			this.action();
-			this.stopStart();
-		},
-		_slideTo: function( slide ) {
-			var currentSlide = this.slides[slide];
-			currentSlide.style.opacity = 1;
+<!--			this.action();-->
+<!--			this.stopStart();-->
+<!--		},-->
+<!--		_slideTo: function( slide ) {-->
+<!--			var currentSlide = this.slides[slide];-->
+<!--			currentSlide.style.opacity = 1;-->
 
-			for( var i = 0; i < this.slides.length; i++ ) {
-				var slide = this.slides[i];
-				if( slide !== currentSlide ) {
-					slide.style.opacity = 0;
-				}
-			}
-		},
-		action: function() {
-			var self = this;
-			self.timer = setInterval(function() {
-				self.index++;
-				if( self.index == self.slides.length ) {
-					self.index = 0;
-				}
-				self._slideTo( self.index );
+<!--			for( var i = 0; i < this.slides.length; i++ ) {-->
+<!--				var slide = this.slides[i];-->
+<!--				if( slide !== currentSlide ) {-->
+<!--					slide.style.opacity = 0;-->
+<!--				}-->
+<!--			}-->
+<!--		},-->
+<!--		action: function() {-->
+<!--			var self = this;-->
+<!--			self.timer = setInterval(function() {-->
+<!--				self.index++;-->
+<!--				if( self.index == self.slides.length ) {-->
+<!--					self.index = 0;-->
+<!--				}-->
+<!--				self._slideTo( self.index );-->
 
-			}, 3000);
-		},
-		stopStart: function() {
-			var self = this;
-			self.el.addEventListener( "mouseover", function() {
-				clearInterval( self.timer );
-				self.timer = null;
+<!--			}, 3000);-->
+<!--		},-->
+<!--		stopStart: function() {-->
+<!--			var self = this;-->
+<!--			self.el.addEventListener( "mouseover", function() {-->
+<!--				clearInterval( self.timer );-->
+<!--				self.timer = null;-->
 
-			}, false);
-			self.el.addEventListener( "mouseout", function() {
-				self.action();
+<!--			}, false);-->
+<!--			self.el.addEventListener( "mouseout", function() {-->
+<!--				self.action();-->
 
-			}, false);
-		}
-
-
-	};
-
-	document.addEventListener( "DOMContentLoaded", function() {
-
-		var slider = new Slideshow( "#main-slider" );
-
-	});
+<!--			}, false);-->
+<!--		}-->
 
 
-})();
+<!--	};-->
+
+<!--	document.addEventListener( "DOMContentLoaded", function() {-->
+
+<!--		var slider = new Slideshow( "#main-slider" );-->
+
+<!--	});-->
 
 
-      </script>
+<!--})();-->
+
+
+<!--      </script>-->
 
       <script>
 //Array of images which you want to show: Use path you want.
@@ -494,169 +264,5 @@ function doSlideshow(){
 }
 </script>
 <script>
-	/*my lovely util functions*/
-/*active class*/
-
-function activate() {
-	this.name = "active";
-	this.init = function (el) {
-		el.addClass("active").siblings().removeClass("active");
-	}
-}
-/*get size of element*/
-function size() {
-	this.width = function (el) {
-		return el.width();
-	}
-	this.height = function (el) {
-		return el.height();
-	}
-}
-
-function bgSizeMatch(el) {
-	var activeW = el.width();
-	alter.nav.css({
-		"background-size": activeW + "px 100px"
-	});
-}
-
-function bgPos() {
-	this.init = function (el) {
-		offset = el.position().left;
-		corrections = el.parent().offset().left;
-		offset = offset - corrections;
-		alter.nav.animate({
-			"background-position": offset + "px"
-		});
-	}
-}
-
-function adjust() {
-	this.init = function (el) {
-		var adjustActive = el.index() + 1;
-		return adjustActive;
-	}
-}
-
-function slide() {
-	this.init = function (multiplier) {
-		var amount = multiplier * $(window).width();
-		return amount + "px";
-	}
-}
-
-/*element vars*/
-var alter = {
-	nav: $(".slide-tab .navbar-nav"),
-	navItem: $(".slide-tab ul:not(.control) li"),
-	navItemActive: $(".slide-tab ul:not(.control) li.active"),
-	navControl: $(".control"),
-}
-
-/*what utils we are using today*/
-bgSizeMatch($(".active"));
-size = new size();
-active = new activate();
-bgPos = new bgPos();
-adjust = new adjust();
-slide = new slide();
-
-slideTab = { //main function
-	init: function () {
-
-		alter.navItem.click(function (e) {
-			bgSizeMatch($(this));
-			active.init($(this));
-			bgPos.init($(this));
-      
-      /*Prototyping scroll reset offset center*/
-      var offset = $(this).position().left;
-    
-      
-			var index = $(this).index();
-			var clickAmount = slide.init(index);
-
-			$(".content").parent().parent().animate({
-				scrollLeft: clickAmount + "px"
-			}, 300);
-		});
-
-		alter.navItem.each(function () {
-			$(".panes").append("<div class='content'><div class='col-md-10 col-md-offset-1 ratio-2:1 inner'><ul class='slot'><li class='icon col-md-1 ratio-1:1'>1</li><li class='icon col-md-1 ratio-1:1'>2</li><li class='icon col-md-1 ratio-1:1'>3</li><li class='icon col-md-1 ratio-1:1'>4</li><li class='icon col-md-1 ratio-1:1'>5</li><li class='icon col-md-1 ratio-1:1'>6</li></ul></div></div>");
-		});
-
-
-		//measure total child width, designed responsively too.
-		var acumWidth = 0;
-		alter.navItem.each(function () {
-			var itemWidth = $(this).width();
-			acumWidth += itemWidth;
-			//corrcetion
-			var controlWidth = alter.navControl.width();
-			$(this).parent().css({
-				"width": acumWidth + controlWidth + "px"
-			});
-		});
-
-
-
-		$(window).bind('resizeEnd', function () {
-			//get the new window size and return it from this special event
-		});
-
-
-		function tab() {
-			this.left = function () {
-				var prev = $(".active").prev();
-				var prevI = $(".active").prev().index();
-				var leftAmount = slide.init(prevI);
-
-				active.init(prev);
-				bgPos.init(prev);
-				bgSizeMatch(prev);
-
-				$(".content").parent().parent().animate({
-					scrollLeft: leftAmount + "px"
-				}, 300);
-			}
-			this.right = function () {
-				var next = $(".active").next();
-				var nextI = $(".active").next().index();
-				var rightAmount = slide.init(nextI);
-
-				active.init(next);
-				bgPos.init(next);
-				bgSizeMatch(next);
-
-				$(".content").parent().parent().animate({
-					scrollLeft: rightAmount + "px"
-				}, 300);
-			}
-		}
-		tab = new tab();
-
-		$(".half[data='right'] .click").click(function () {
-			tab.right();
-		});
-		$(".half[data='left'] .click").click(function () {
-			tab.left();
-		});
-		$(".half").swipe({
-			swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-				if (direction == "left") {
-					tab.right();
-				} else if (direction == "right") {
-					tab.left();
-				}
-			}
-		});
-	}
-}
-
-$(function () {
-	$(slideTab.init);
-});
-</script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script> 
   </body>
 </html>
