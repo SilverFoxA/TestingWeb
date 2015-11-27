@@ -75,7 +75,8 @@ ul.links li a {
     text-decoration: none;
 }
 
-ul.links li a .active{
+
+.active{
   color: green;
     text-decoration: none;
 }
@@ -260,7 +261,7 @@ padding-right: 10px;
   text-align: center;
   border-radius: 5px;
   width: 100%;
-    max-height: 100%;
+/*    max-height: 100%;*/
   padding: 45px 40px 40px 40px;
   background-color: white;
 }
@@ -500,8 +501,8 @@ padding-right: 10px;
  */
 
 .grid #main #gallery {
-	-webkit-transform: rotate3d(1,0,1,-10deg);
-	margin-top: 20px;
+	-webkit-transform: rotate3d(1,0,1,0deg);
+/*	margin-top: 10px;*/
 }
 
 	.grid #main #gallery > li {
@@ -541,14 +542,16 @@ padding-right: 10px;
  */
 
 .stack #main {
-    margin-top: 150px;
-	padding-left: 100px;
+/*    margin-top: 150px;*/
+    width: 100%;
+    position: relative;
+	padding-left: 10%;
 }
 
 	.stack #main #gallery {
 	    -webkit-transform: rotate3d(0,0,0,0) !important;
 	    position: relative;
-		margin-left: 150px;
+		margin-left: 15%;
 	}
 
 		.stack #main #gallery li {
@@ -558,7 +561,7 @@ padding-right: 10px;
 		    top: 0 !important;
 		    left: 0 !important;
 		    width: 640px;
-		    height: 360px;
+		    height: 360px; /*main video*/
 		    background: #ccc;
 		    margin: 0;
 		}
@@ -599,6 +602,9 @@ padding-right: 10px;
 
 .playing #container {
     background: rgba(0,0,0,0.8);
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 	.playing #main #gallery > li.current {
@@ -653,16 +659,19 @@ padding-right: 10px;
 	display: block;
 }
 .control#next {
+    z-index: 2;
 	background-image: url('../img/up.png');
-	top: 230px;
+	top: 170px;
 }
 .control#back {
+    z-index: 2;
 	background-image: url('../img/back.png');
-	top: 310px;
+	top: 230px;
 }
 .control#prev {
+    z-index: 2;
 	background-image: url('../img/down.png');
-	top: 390px;
+	top: 290px;
 }
 .control:hover {
     background-color: rgba(0,0,0,0.8);

@@ -5,11 +5,11 @@
 	$.jc.videoGallery = {
 		conf: {
 			cols: 3, // Items per row.
-			ySpace: 400, // Y Space between items (stack state)
-			zSpace: 200, // Z Space between items (stack state)
-			tiltGrid: true,	// Whether the grid should be tilted (grid state)
-			minGridDeg: -10, // Minimum degrees of tilt (grid state)
-			maxGridDeg: 10, // Maximum degrees of tilt (grid state)
+			ySpace: 100, // Y Space between items (stack state)
+			zSpace: 100, // Z Space between items (stack state)
+			tiltGrid: false,	// Whether the grid should be tilted (grid state)
+			minGridDeg: 0, // Minimum degrees of tilt (grid state)
+			maxGridDeg: 0, // Maximum degrees of tilt (grid state)
 			keyboard: true, // Enable/disabled keyboard controls
 			items: 'li', // Selector used for items
 			stateHolder: 'body', // Element used for state control,
@@ -167,7 +167,7 @@
 				// Move items forward
 				items.each(function() {
 					if($(this).hasClass(conf.currentClass)) {
-						newIndex = $(this).index() + modify; //////////////////////////////Here the element is comming forward
+						newIndex = $(this).index() + modify;
 						return false;
 					}
 				});
@@ -243,15 +243,15 @@
 				windowWidth = $(window).width(),
 				onePerc = (windowWidth / 100);
 
-			$(window).mousemove(function(e) {
-				if($(conf.stateHolder).hasClass('grid')) {
-					var mouseXPerc = parseInt(e.pageX / onePerc, null);
-					var currentDeg = parseInt((20 / 100) * mouseXPerc, null) - 10;
-					if(currentDeg < -4) { currentDeg = -4; }
-					if(currentDeg > 4) { currentDeg = 4; }
-					gallery[0].style['-webkit-transform'] = 'rotate3d(1,0,1,' + currentDeg + 'deg)';
-				}
-			});
+//			$(window).mousemove(function(e) {
+//				if($(conf.stateHolder).hasClass('grid')) {
+//					var mouseXPerc = parseInt(e.pageX / onePerc, null);
+//					var currentDeg = parseInt((20 / 100) * mouseXPerc, null) - 10;
+////					if(currentDeg < -4) { currentDeg = -4; }
+////					if(currentDeg > 4) { currentDeg = 4; }
+////					gallery[0].style['-webkit-transform'] = 'rotate3d(1,0,1,' + currentDeg + 'deg)';
+//				}
+//			});
 		}
 
 		// Up and down to cycle through videos
@@ -391,6 +391,7 @@ $(function() {
   var $team = $('nav.greedy h1');
   var $nav_a = $('nav.greedy ul li a');
   var $nav_active = $('nav.greedy ul li');
+    var $btn1 = $('.links li');
 
   var numOfItems = 0;
   var totalSpace = 0;
@@ -414,6 +415,10 @@ $($btn).click(function(){
 		}else{
             clickcount=0;
 			$(this).next().slideDown();
+            $($btn1).click(function(){
+                $($btn).next().slideUp();
+            return true;
+            });
 		}
     return false;
 	});
