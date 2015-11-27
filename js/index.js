@@ -1,5 +1,10 @@
 (function($) {
 
+//  var container_width = $('.content__wrapper #container').outerWidth;
+//  var container_height = $('.container__wrapper #container').outerHeight;
+//
+//    $('#gallery > li').css('width','150px')
+//    .css('height','100px');
 	// Static constructs
 	$.jc = $.jc || {};
 	$.jc.videoGallery = {
@@ -383,7 +388,7 @@ $(function() {
 
 
 $(function() {
-
+  var $details = $('#section2 #details');
   var $nav = $('nav.greedy');
   var $btn = $('nav.greedy button');
   var $vlinks = $('nav.greedy .links');
@@ -391,7 +396,7 @@ $(function() {
   var $team = $('nav.greedy h1');
   var $nav_a = $('nav.greedy ul li a');
   var $nav_active = $('nav.greedy ul li');
-    var $btn1 = $('.links li');
+  var $btn1 = $('.links li');
 
   var numOfItems = 0;
   var totalSpace = 0;
@@ -445,11 +450,15 @@ $($btn).click(function(){
           $team.css('color','#fff');
           $nav_a.css('color','#fff');
           $btn.css('color','#fff');
+//          $details.remove('right');
+//          $details.css('bottom',0);
       } else{
       $nav.css('background-color','transparent');
            $team.css('color','#000');
           $nav_a.css('color','#000');
             $btn.css('color','#000');
+//          $details.remove('bottom');
+//          $details.css('right',0);
       }
     // Update the button accordingly
     $btn.attr("count", numOfItems - numOfVisibleItems);
