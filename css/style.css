@@ -481,19 +481,21 @@ body {
     background-position: 0 0; } }
 .layers {
     position: relative;
-    width: 1000px;
-    height: 600px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     margin: 0 auto;
-    margin-top: 20px;
+/*    margin-top: 20px;*/
+/*
     border: 10px solid rgba(0,0,0,0.25);
     max-width: 1700px;
     max-height: 700px;
+*/
 }
 .layer {
     position: absolute;
-    width: 1600px;
-    height: 800px;
+    width: 100%;
+    height: 100%;
 }
 .layers .layer-4
 {
@@ -526,7 +528,7 @@ body {
     text-shadow: 1px 1px #000;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 100%) {
     .layers {
         width: 100%;
         height: 100%;
@@ -535,29 +537,187 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 100%) {
     .layers {
         width: 100%;
         height: 100%;
         margin: 0;
         border: 0;
-        max-width: 750px;
-        max-height: 350px;
     }
     .layers .layer-4
     {
+        width: 100%;
         background: url(http://lab.peterschmalfeldt.com/accelero/demos/images/demo1/layer-4-small.png) no-repeat center center;
     }
     .layers .layer-3
     {
+        width: 100%;
         background: url(http://lab.peterschmalfeldt.com/accelero/demos/images/demo1/layer-3-small.png) no-repeat center center;
     }
     .layers .layer-2
     {
+        width: 100%;
         background: url(http://lab.peterschmalfeldt.com/accelero/demos/images/demo1/layer-2-small.png) no-repeat center center;
     }
     .layers .layer-1
     {
+        width: 100%;
         background: url(http://lab.peterschmalfeldt.com/accelero/demos/images/demo1/layer-1-small.jpg) no-repeat center center;
     }
+}
+
+
+/*
+ * Javascript/Canvas Spinning Globe
+ * Copyright (c) 2011 MIT.
+ * Developed by Tarik Akyol (www.tarikakyol.com)
+ */
+
+* {
+    -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+.navigator {
+        background: none !important;
+}
+
+body {
+        -webkit-transform: transform3d(0,0,0);
+}
+
+/*
+html,
+body {
+	background: #1d1f20;
+	padding: 0;
+	margin: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	word-wrap:break-word;
+}
+*/
+
+h1{color:white}
+a{text-decoration: none; color: black; border: 0;}
+
+div #spinner{
+    position: absolute;
+    height: 100%;
+    width: 70%;
+/*    margin: 245px 0px 0px 34px;*/
+    padding:5%;
+    overflow: hidden;
+    z-index: 100;
+    text-align: center;
+}
+
+.main{
+    width: 50%;
+    height: 70%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.countries-top{
+    position: absolute;
+    width: 60%;
+    height: 14%;
+/*    margin: 50px 0px 0px 66px; */
+}
+
+.countries-bottom{
+    position: absolute;
+    width: 60%;
+    height: 14%;
+    margin: 75% 0px 0px 60px;
+    z-index: 1000;
+}
+
+.country{
+    width: 120px;
+    height: 140px;
+    float: left;
+    overflow: visible;
+}
+
+.country-bottom{
+    font-family: Helvetica;
+    font-size: 9pt;
+    line-height: 11.2pt;
+    width: 140px;
+    height: 80px;
+    padding-top: 10px;
+    color: #ddd;
+    overflow:visible;
+}
+
+.country-top{
+    width: 120px;
+    height: 50px;
+    color: white;
+    font-size: 30px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.country-top.pierce{
+    position: relative;
+    width: 34px;
+    height: 55px;
+    float: left;
+    margin-right: 4px;
+}
+.country-top.text{
+    font-family: Helvetica;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 14px;
+    left: 0.25em;
+    z-index: 100;
+
+}
+.country-top.top{
+    width: 35px;
+    height: 25px;
+    background: rgb(0,172,236);
+    margin-bottom: 1px;
+}
+.country-top.bottom{
+    width: 35px;
+    height: 25px;
+    background: rgb(0,172,236);
+}
+
+
+.divider{
+    float: left;
+    width: 11px;
+    height: 150px;
+}
+
+.shadow{
+    position: absolute;
+    top: 730px;
+    left: 175px;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    -webkit-border-radius: 125px;
+    background-color: rgba(0,0,0,0.2);
+    -webkit-transform:rotate3d(1, -0.6, 1, 90deg);
+    z-index: 10;
+}
+
+.contents{
+    position: absolute;
+    top: 70px;
+    left: 66px;
+    width: 160px;
+    height: 27px;
+    background:url(images/contents.png) no-repeat;
+    background-size: 100%;
 }
