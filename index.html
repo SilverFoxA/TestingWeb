@@ -64,7 +64,7 @@
 		.content{
             width: 100%;
             height: 100%;
-            background-image: url(img/background.png);
+/*            background-image: url(img/background.png);*/
             background-size: cover;
             z-index: 999;
             position: absolute;
@@ -116,11 +116,129 @@
     bottom: 0;
     left: 0;
   }
+        span{
+        font-size: 90%;
+        }
+
+
+        * {
+    padding: 0;
+    margin: 0;
+}
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+html,body
+{
+    width: 100%;
+    height: 100%;
+}
+body
+{
+    background-color: #222;
+}
+.layers {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+/*    margin-top: 20px;*/
+/*    border: 10px solid rgba(0,0,0,0.25);*/
+/*
+    max-width: 1700px;
+    max-height: 700px;
+*/
+}
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.layers .layer-4
+{
+    background: url(http://lab.peterschmalfeldt.com/accelero/demos/images/demo1/layer-4.png) no-repeat center center;
+}
+.layers .layer-3
+{
+    background: url(http://lab.peterschmalfeldt.com/accelero/demos/images/demo1/layer-3.png) no-repeat center center;
+}
+.layers .layer-2
+{
+    background: url(http://lab.peterschmalfeldt.com/accelero/demos/images/demo1/layer-2.png) no-repeat center center;
+}
+.layers .layer-1
+{
+    background: url(http://lab.peterschmalfeldt.com/accelero/demos/images/demo1/layer-1.jpg) no-repeat center center;
+}
+.info
+{
+    z-index: 25;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+.info a
+{
+    color: white;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 1px 1px #000;
+}
+
+@media (max-width: 1024px) {
+    .layers {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .layers {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border: 0;
+        max-width: 750px;
+        max-height: 350px;
+    }
+    .layers .layer-4
+    {
+        background: url(http://lab.peterschmalfeldt.com/accelero/demos/images/demo1/layer-4-small.png) no-repeat center center;
+    }
+    .layers .layer-3
+    {
+        background: url(http://lab.peterschmalfeldt.com/accelero/demos/images/demo1/layer-3-small.png) no-repeat center center;
+    }
+    .layers .layer-2
+    {
+        background: url(http://lab.peterschmalfeldt.com/accelero/demos/images/demo1/layer-2-small.png) no-repeat center center;
+    }
+    .layers .layer-1
+    {
+        background: url(http://lab.peterschmalfeldt.com/accelero/demos/images/demo1/layer-1-small.jpg) no-repeat center center;
+    }
+}
+
 	</style>
 <body>
     <div id="fullpage">
 	<div class="section " id="section9">
 		<div class="content">
+             <div class="layers accelero" data-control-method="touch" data-max-angle="1" data-speed="0.15">
+
+  <div class="layer layer-4"></div>
+
+  <div class="layer layer-3"></div>
+
+<!--  <div class="layer layer-2"></div>-->
+
+  <div class="layer layer-1"></div>
+
+</div>
             <div id="texts">
             <h1><font color="white" style="opacity:1;">Team Krishna</font></h1>
             <p><font color="white"><span><img src="img/left.png" style="width:5%; height:1.3%; padding-right:10px;" /></span><span>Redifining education with the promise of freedom.</span><span><img src="img/right.png" style="width:5%; height:1.3%; padding-left:10px;" /></span></font></p>
@@ -129,13 +247,11 @@
             </div>
 
 		</div>
-<!--
-        <div class="parallax" id="back"></div>
-       <div class="parallax" id="middle"></div>
-       <div class="parallax" id="front"></div>
--->
 	</div>
     </div>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="js/index.js"></script>
+
     <script type="text/javascript" src="javascript.fullPage.js"></script>
 <script type="text/javascript">
 	fullpage.initialize('#fullpage', {

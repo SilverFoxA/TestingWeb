@@ -108,6 +108,7 @@
 		/* Section 3
 		 * --------------------------------------- */
 		#section2{
+            z-index: 5;
 			background-color: #2C3E50;
 		}
 		#section2 h1{
@@ -129,7 +130,6 @@
 			opacity: 0.6;
 		}
 	</style>
-</style>
   <body>
 
        <nav class='greedy' style="margin:0px;">
@@ -159,13 +159,16 @@
 		</div>
 	</div>
 	<div class="section" id="section1">
-		<div class="content">
-        </div>
+        <div>
+        <video autoplay loop id="video-background" muted>
+            <source src="http://beta.mattgrossdesign.com/sites/default/files/wood%20autumn-HD.mp4" type="video/mp4">
+        </video>
+            </div>
 	</div>
 	<div class="section" id="section2">
 			<div class="hexagon"></div>
         <div id="details">
-        Hello Worldz
+
         </div>
 
 	</div>
@@ -211,16 +214,20 @@
 	</div>
 	<div class="section" id="section2">
 		<div class="content" style="padding-top:20%;">
-			<h1>Compatible</h1>
-			<p>IE 8+ support.</p>
+			  <section class="stage">
+                  <figure class="ball"><span class="shadow"></span></figure>
+            </section>
 		</div>
 	</div>
+<!--
     <div class="section" id="section4">
 		<div class="content" style="padding-top:20%;">
-			<h1>Compatible</h1>
-			<p>IE 8+ support.</p>
+			  <section class="stage">
+                  <figure class="ball"><span class="shadow"></span></figure>
+            </section>
 		</div>
 	</div>
+-->
       </div>
      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
 	<script src="js/jquery.jc.videogallery.js"></script>
@@ -239,17 +246,7 @@
 	});
 
 </script>
-
 <script>
-//         var $nav_active = $('#scroller img');
-//        $($nav_active).on("click", function() {
-//
-//		      // Remove class from active tab
-//		      $($nav_active).removeClass("active");
-//
-//		      // Add class active to clicked tab
-//		      $(this).addClass("active");
-//        });
           //Array of images which you want to show: Use path you want.
           var images=new Array('img/first.png','img/second.png','img/third.png','img/four.png');
           var nextimage=0;
