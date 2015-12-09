@@ -719,7 +719,7 @@ WordPress project site: http://codecanyon.net/item/all-around-wordpress-content-
 		create_html: function () {
 			this.items_counts = this.options.map.length;
 			var i, img, real_i;
-			var html_code = '<div class="'+this.options.container_class+'"><div class="image_more_info"><a href="#"><img alt="" src="'+this.options.plugin_url+'images/more.png"></a></div>';
+			var html_code = '<div class="'+this.options.container_class+'"><div class="image_more_info"><a href="#"><img alt="" src="'+this.options.plugin_url+'img/mail.png"></a></div>';
 			this._start = -1;
 			this._end = this.max_show-1;
 			var pos_size;
@@ -729,11 +729,11 @@ WordPress project site: http://codecanyon.net/item/all-around-wordpress-content-
 				html_code += this._create_a_html_for_a_child (img,pos_size.new_pos);
 			}
 			var max_position = this.options.max_shown_items * this.options.child_div_width;
-			if (this.options.preload_all_images) {
-				for (i=0;i<this.items_counts;i++) {
-					 $('<img/>')[0].src=this.options.map[i].image;
-				}
-			}
+//			if (this.options.preload_all_images) {
+//				for (i=0;i<this.items_counts;i++) {
+//					 $('<img/>')[0].src=this.options.map[i].image;
+//				}
+//			}
 			html_code += this._create_arrows ();
 			if (this.options.hv_switch)
 				html_code += '<div class="clear"></div></div>';
@@ -857,11 +857,11 @@ WordPress project site: http://codecanyon.net/item/all-around-wordpress-content-
 				}
 			} else {
 				if (this.options.border_on_off==0 || this.options.use_thin_arrows==1) {
-					html = '<div class="circle_slider_nav_left"><img src="'+this.options.plugin_url+'images/left2.png" alt="left" /></div>';
-					html += '<div class="circle_slider_nav_right"><img src="'+this.options.plugin_url+'images/right2.png" alt="right" /></div>';
+					html = '<div class="circle_slider_nav_left"><img src="'+this.options.plugin_url+'img/prev.png" alt="left" /></div>';
+					html += '<div class="circle_slider_nav_right"><img src="'+this.options.plugin_url+'img/next.png" alt="right" /></div>';
 				} else {
-					html = '<div class="circle_slider_nav_left"><img src="'+this.options.plugin_url+'images/left.png" alt="left" /></div>';
-					html += '<div class="circle_slider_nav_right"><img src="'+this.options.plugin_url+'images/right.png" alt="right" /></div>';
+					html = '<div class="circle_slider_nav_left"><img src="'+this.options.plugin_url+'img/prev.png" alt="left" /></div>';
+					html += '<div class="circle_slider_nav_right"><img src="'+this.options.plugin_url+'img/next.png" alt="right" /></div>';
 				}
 			}
 			return html;
