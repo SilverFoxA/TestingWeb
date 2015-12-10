@@ -1211,3 +1211,9 @@ float: left;
     background-image: url('../img/four.png');
     background-size: cover;
 }
+
+#up {
+    margin-top: 65px;
+    right: 3%;
+    position: absolute;
+}
