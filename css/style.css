@@ -1169,7 +1169,45 @@ float: left;
 }
 
 #video_here {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
+}
+
+
+
+.intro0 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    position: relative;
+    background-image: url('../img/first.png');
+    background-size: cover;
+}
+
+.intro1 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    position: relative;
+    background-image: url('../img/second.png');
+    background-size: cover;
+}
+
+.intro2 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    position: relative;
+    background-image: url('../img/third.png');
+    background-size: cover;
+}
+
+.intro3 {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    position: relative;
+    background-image: url('../img/four.png');
+    background-size: cover;
 }
