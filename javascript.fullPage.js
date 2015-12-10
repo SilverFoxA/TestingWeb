@@ -1805,7 +1805,7 @@
 
         var list = '';
         for(var i=0; i< numSlides; i++){
-            list = list + '<li><a href="#"><span></span></a></li>';
+            list = list + '<li><a href="#firstPage/'+i+'"><span></span></a></li>';
         }
 
         ul.innerHTML = ul.innerHTML + list;
