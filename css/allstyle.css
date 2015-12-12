@@ -129,7 +129,7 @@
   top: 100%;
   right: 30px;
   left: 30px;
-  bottom: 54px;
+  bottom: 20px;
   overflow: hidden;
   opacity: 0;
   filter: alpha(opacity=0);
@@ -1253,3 +1253,5 @@ h3 {
     margin: 10px;
     margin-top: 60px;
 }
+
+
