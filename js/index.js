@@ -1,4 +1,32 @@
+$(function() {
+        $('.material-card > .mc-btn-action').click(function () {
+            var card = $(this).parent('.material-card');
+            var icon = $(this).children('i');
+            icon.addClass('fa-spin-fast');
 
+            if (card.hasClass('mc-active')) {
+                card.removeClass('mc-active');
+
+                window.setTimeout(function() {
+                    icon
+                        .removeClass('fa-arrow-left')
+                        .removeClass('fa-spin-fast')
+                        .addClass('fa-bars');
+
+                }, 800);
+            } else {
+                card.addClass('mc-active');
+
+                window.setTimeout(function() {
+                    icon
+                        .removeClass('fa-bars')
+                        .removeClass('fa-spin-fast')
+                        .addClass('fa-arrow-left');
+
+                }, 800);
+            }
+        });
+    });   
 
 
 //(function($) {
@@ -815,21 +843,28 @@ $($btn).click(function(){
       $hlinks.children().first().appendTo($vlinks);
       numOfVisibleItems += 1;
     }
+//      if(screen.width<503){
+//       document.getElementById("containerID").style.visibility="hidden";
+//      } else{
+//       document.getElementById("containerID").style.visibility="visible";
+//      }
       if((numOfItems-numOfVisibleItems)>0){
           //this state defines that the screen is not that of a system but mobile or tablet
       $nav.css('background-color','#04a1fb'); //give dark blue color
           $team.css('color','#fff');
           $nav_a.css('color','#fff');
           $btn.css('color','#fff');
+       //   document.getElementById("containerID").style.visibility="hidden";
 //          $details.remove('right');
 //          $details.css('bottom',0);
       } else{
       $nav.css('background-color','transparent');
+         //   document.getElementById("containerID").style.visibility="visible";
            $team.css('color','#000');
           $nav_a.css('color','#000');
-            $btn.css('color','#000');
-//          $details.remove('bottom');
-//          $details.css('right',0);
+           $btn.css('color','#000');
+////          $details.remove('bottom');
+////          $details.css('right',0);
       }
     // Update the button accordingly
     $btn.attr("count", numOfItems - numOfVisibleItems);
@@ -844,6 +879,8 @@ $($btn).click(function(){
 
 		// Add class active to clicked tab
 		$(this).addClass("active");
+    
+     
  });
   // Window listeners
   $(window).resize(function() {
