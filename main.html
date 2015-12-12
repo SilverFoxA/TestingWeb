@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <title>Testing website</title>
     <link rel="stylesheet" href="css/reset.css">
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/allstyle.css">
     <link rel="stylesheet" type="text/css" href="javascript.fullPage.css" />
-     <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+    <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css'>
+    <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+       <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/blog.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Parse.js -->
+    <script src="//www.parsecdn.com/js/parse-1.2.19.min.js"></script>
+        <!-- Handlebars.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-
   </head>
 <style>
 		/* Reset CSS
@@ -97,7 +108,7 @@
 		/* Section 2
 		 * --------------------------------------- */
 		#section1{
-
+            z-index: -10;
 			background-color: #2EBE21;
 		}
 		#section1 h1{
@@ -159,7 +170,7 @@
 .content_slider_text_block_wrap h3 {font-size: 30px !important;font-family: 'Dosis', sans-serif !important; line-height: 30px !important; margin: 0 !important; padding: 0 !important; display: inline-block !important; font-weight: 600 !important;}
 .content_slider_text_block_wrap a.button_regular {color:#fff; display: inline-block; background:#1ab99b; padding:13px 26px 15px 25px; font-size: 15px; line-height: 16px; height: 16px; font-weight:600; border-radius: 3px;}
 
-.content_slider_text_block_wrap a.button_socials {width:39px; height:39px; padding:5px; display: inline-block; margin:0 5px; border-radius: 3px;}
+.content_slider_text_block_wrap a.button_socials {width:30px; height:30px; padding:5px; display: inline-block; margin:0 5px; border-radius: 3px;}
 .content_slider_text_block_wrap a.button_socials_flat {width:48px; height:48px; padding:0px; display: inline-block; margin:0 5px 0 6px;}
 
 .content_slider_text_block_wrap .fb {background: url(./img/Facebook.png) no-repeat center center #3b5a9a;}
@@ -303,6 +314,7 @@
     border: 1px solid #24221F;
 }
 	</style>
+    
   <body>
 <!--Navigation-->
  <nav class='greedy' style="margin:0px;">
@@ -321,7 +333,7 @@
 <!--Content -->
 <div id="fullpage">
     <!---Home section-->
-	<div class="section " id="section0">
+	<div class="section" id="section0">
         <div class="horizontal-scrolling" data-anchor="Slide0">
 			<div class="intro0"></div>
 		</div>
@@ -340,14 +352,24 @@
     <!---About us section-->
 	<div class="section" id="section1">
         <div id="video_here">
-        <video autoplay loop id="video-background" muted>
-            <source src="http://beta.mattgrossdesign.com/sites/default/files/wood%20autumn-HD.mp4" type="video/mp4">
+       <video autoplay  poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" loop>
+            <source src="//demosthenes.info/assets/videos/polina.webm" type="video/webm">
+            <source src="//demosthenes.info/assets/videos/polina.mp4" type="video/mp4">
         </video>
-            </div>
-	</div>
+        <div id="polina">
+            <div id="elips1"> <h1>TeamKrishna</h1></div>
+            <div id="elips1"><p style="text-align:center;"><font color="white"><span><img src="img/left.png" style="width:9%; height:3%; padding-right:10px;" /></span><span>Redifining education with the promise of freedom.</span><span><img src="img/right.png" style="width:9%; height:3%; padding-left:10px;" /></span></font></p><br></div>
+            <div id="elips">
+            <p>Team Krishna is the first team to register for the Global Learning XPRIZE Challenge. We are a group of life long learners who believe that every child must have access to quality learning.<br>Our vision is to create a child-centric model of learning by means of an elaborate gaming environment underpinned by a robust, relevant curriculum. This will allow destitute kids to self-learn in environments that are not penetrated by formal education, and support those kids who are not fortunate enough to get good schooling environments. </p>
+            <p>Organized as a volunteer’s team, we are supported by:<br><strong>Our engineers:</strong> who are excited about the challenge of programming machine learning such that a child is directed to learning environments based on child's performance. Our software dares to create an autonomous learning environment for children, where they are engaged in a game which enables them to learn to read, write and speak</p>
+                <p><strong>Our research team:</strong> who are having a brilliant time creating a curriculum whose structure is flexible enough for children to engage and grow from diverse starting points.</p></div>
+            <button><div id="elips1">Pause video</div></button>
+        </div>
+    </div>
+</div>
     <!--- Team section-->
 	<div class="section" id="section23">
-        <div id="up"><span><a href="allmember.html"><font color="black" size="4">All members </font></a><span><img src="./img/next.png"/></span></span></div>
+        <div id="up"><span><a href="allmember.html"><span><img width="15%" height="15%" src="./img/person.png"/></span><font color="black" size="3"> All members </font></a></span></div>
          <div class="content_slider_wrapper" id="slider1" style="margin-top:70px;">
 <!---Subhajit-->
 	<div class="circle_slider_text_wrapper" id="sw0" style="display: none;">
@@ -355,15 +377,16 @@
 		<div class="content_slider_text_block_wrap">
 		<!-- "content_slider_text_block_wrap" is a div class for custom content -->
 			<h3>Subhajit Roy</h3><br /><br />
-
-			<span><span class="bold">Position: </span>Co-Founder</span><br />
+            <div id="clipContent">
+			<span><span class="bold">Position: </span>Co-Founder</span>
 			<span><span class="bold">About: </span>Subhajit specializes in development of consumer, industrial and next generation wearable medical products. Previously with Team Danvantri , one of the top 10 finalists at  XPrize Tricorder Challenge.
-</span><br /><br /><br />
-
+</span><br /><br /><br /></div>
+ <div id="social">
 			<a href="#" class="button_socials button_hover_effect fb" data-hovercolor="#496dba" data-hoveroutcolor="#3b5a9a"></a>
 			<a href="#" class="button_socials button_hover_effect tw" data-hovercolor="#4bb8e7" data-hoveroutcolor="#23aae1"></a>
 			<a href="#" class="button_socials button_hover_effect gplus" data-hovercolor="#cb383b" data-hoveroutcolor="#cb383b"></a>
 			<a href="#" class="button_socials button_hover_effect linkedin" data-hovercolor="#1f75a7" data-hoveroutcolor="#1f75a7"></a>
+            </div>
 		</div>
 		<div class="clear"></div>
 	</div>
@@ -373,15 +396,15 @@
 		<div class="content_slider_text_block_wrap">
 		<!-- "content_slider_text_block_wrap" is a div class for custom content -->
 			<h3>Kaushik Mazumdar</h3><br /><br />
-
+<div id="clipContent">
 			<span><span class="bold">Position: </span>Software Lead</span><br />
 			<span><span class="bold">About: </span>Kaushik has a wide range of cross domain software development expertise in the fields of BIOS, Casino slot game development and fraud detection for telecom giants.
-</span><br /><br /><br />
-
+    </span><br /><br /><br /></div>
+ <div id="social">
 			<a href="#" class="button_socials button_hover_effect fb" data-hovercolor="#496dba" data-hoveroutcolor="#3b5a9a"></a>
 			<a href="#" class="button_socials button_hover_effect tw" data-hovercolor="#4bb8e7" data-hoveroutcolor="#23aae1"></a>
 			<a href="#" class="button_socials button_hover_effect gplus" data-hovercolor="#cb383b" data-hoveroutcolor="#cb383b"></a><a href="#" class="button_socials button_hover_effect linkedin" data-hovercolor="#1f75a7" data-hoveroutcolor="#1f75a7"></a>
-
+            </div>
 		</div>
 		<div class="clear"></div>
 	</div>
@@ -391,14 +414,15 @@
 		<div class="content_slider_text_block_wrap">
 		<!-- "content_slider_text_block_wrap" is a div class for custom content -->
 			<h3>Gargi Mazumdar</h3><br /><br />
-
+<div id="clipContent">
 			<span><span class="bold">Position: </span>Co-founder</span><br />
 			<span><span class="bold">About: </span>Gargi is a software engineer with a commitment to social work. Has previous experience of working with NGOs such as School on Wheels' and 'Childline'.</span><br /><br /><br />
-
+            </div>
+             <div id="social">
 		<a href="#" class="button_socials button_hover_effect fb" data-hovercolor="#496dba" data-hoveroutcolor="#3b5a9a"></a>
 			<a href="#" class="button_socials button_hover_effect tw" data-hovercolor="#4bb8e7" data-hoveroutcolor="#23aae1"></a>
 			<a href="#" class="button_socials button_hover_effect gplus" data-hovercolor="#cb383b" data-hoveroutcolor="#cb383b"></a>
-			<a href="#" class="button_socials button_hover_effect linkedin" data-hovercolor="#1f75a7" data-hoveroutcolor="#1f75a7"></a>
+                 <a href="#" class="button_socials button_hover_effect linkedin" data-hovercolor="#1f75a7" data-hoveroutcolor="#1f75a7"></a></div>
 		</div>
 		<div class="clear"></div>
 	</div>
@@ -408,15 +432,16 @@
 		<div class="content_slider_text_block_wrap">
 		<!-- "content_slider_text_block_wrap" is a div class for custom content -->
 			<h3>Somnath Chakraborty</h3><br /><br />
-
+<div id="clipContent">
 			<span><span class="bold">Position: </span>Branding & Marketing Lead</span><br />
 			<span><span class="bold">About: </span>Somnath is a software engineer by profession, a passionate technocrat and a hobbyist photographer. Experienced in big data analytics and mainframes.
- </span><br /><br /><br />
-	<a href="#" class="button_socials button_hover_effect fb" data-hovercolor="#496dba" data-hoveroutcolor="#3b5a9a"></a>
+    </span><br /><br /><br /></div>
+            <div id="social">
+	       <a href="#" class="button_socials button_hover_effect fb" data-hovercolor="#496dba" data-hoveroutcolor="#3b5a9a"></a>
 			<a href="#" class="button_socials button_hover_effect tw" data-hovercolor="#4bb8e7" data-hoveroutcolor="#23aae1"></a>
 			<a href="#" class="button_socials button_hover_effect gplus" data-hovercolor="#cb383b" data-hoveroutcolor="#cb383b"></a>
 			<a href="#" class="button_socials button_hover_effect linkedin" data-hovercolor="#1f75a7" data-hoveroutcolor="#1f75a7"></a>
-		
+		</div>
 		</div>
 		<div class="clear"></div>
 	</div>
@@ -426,15 +451,16 @@
 		<div class="content_slider_text_block_wrap">
 		<!-- "content_slider_text_block_wrap" is a div class for custom content -->
 			<h3>Rahul Venugopal</h3><br /><br />
-
+<div id="clipContent">
 			<span><span class="bold">Position: </span>Leads on Science of Learning</span><br />
 			<span><span class="bold">About: </span>Rahul develops innovative teaching methods for the digital environment. Holds a Masters in Medical electronics, and currently pursuing neuroscience research while teaching.
-</span><br /><br /><br />
+    </span><br /><br /><br /></div>
+             <div id="social">
 	<a href="#" class="button_socials button_hover_effect fb" data-hovercolor="#496dba" data-hoveroutcolor="#3b5a9a"></a>
 			<a href="#" class="button_socials button_hover_effect tw" data-hovercolor="#4bb8e7" data-hoveroutcolor="#23aae1"></a>
 			<a href="#" class="button_socials button_hover_effect gplus" data-hovercolor="#cb383b" data-hoveroutcolor="#cb383b"></a>
 			<a href="#" class="button_socials button_hover_effect linkedin" data-hovercolor="#1f75a7" data-hoveroutcolor="#1f75a7"></a>
-		
+            </div>
 		</div>
 		<div class="clear"></div>
 	</div>
@@ -444,14 +470,15 @@
 		<div class="content_slider_text_block_wrap">
 		<!-- "content_slider_text_block_wrap" is a div class for custom content -->
 			<h3>Swati Saxena</h3><br /><br />
-
+<div id="clipContent">
 			<span><span class="bold">Position: </span>Curriculum Expert </span><br />
-			<span><span class="bold">About: </span>Swati is the Founder of Read To Speak, an education start-up that focuses on improving literacy for children and adult learners. Curriculum expert for languages.</span><br /><br /><br />
-	<a href="#" class="button_socials button_hover_effect fb" data-hovercolor="#496dba" data-hoveroutcolor="#3b5a9a"></a>
+    <span><span class="bold">About: </span>Swati is the Founder of Read To Speak, an education start-up that focuses on improving literacy for children and adult learners. Curriculum expert for languages.</span><br /><br /><br /></div>
+	 <div id="social">
+            <a href="#" class="button_socials button_hover_effect fb" data-hovercolor="#496dba" data-hoveroutcolor="#3b5a9a"></a>
 			<a href="#" class="button_socials button_hover_effect tw" data-hovercolor="#4bb8e7" data-hoveroutcolor="#23aae1"></a>
 			<a href="#" class="button_socials button_hover_effect gplus" data-hovercolor="#cb383b" data-hoveroutcolor="#cb383b"></a>
 			<a href="#" class="button_socials button_hover_effect linkedin" data-hovercolor="#1f75a7" data-hoveroutcolor="#1f75a7"></a>
-		
+            </div>
 		</div>
 		<div class="clear"></div>
 	</div>
@@ -461,15 +488,16 @@
 		<div class="content_slider_text_block_wrap">
 		<!-- "content_slider_text_block_wrap" is a div class for custom content -->
 			<h3>Dipankar Patra</h3><br /><br />
-
+<div id="clipContent">
 			<span><span class="bold">Position: </span>Teaching & Research Lead</span><br />
 			<span><span class="bold">About: </span>Dipankar is a software engineer by profession in the field of embedded systems.
-</span><br /><br /><br />
-	<a href="#" class="button_socials button_hover_effect fb" data-hovercolor="#496dba" data-hoveroutcolor="#3b5a9a"></a>
+    </span><br /><br /><br /></div>
+	 <div id="social">
+            <a href="#" class="button_socials button_hover_effect fb" data-hovercolor="#496dba" data-hoveroutcolor="#3b5a9a"></a>
 			<a href="#" class="button_socials button_hover_effect tw" data-hovercolor="#4bb8e7" data-hoveroutcolor="#23aae1"></a>
 			<a href="#" class="button_socials button_hover_effect gplus" data-hovercolor="#cb383b" data-hoveroutcolor="#cb383b"></a>
 			<a href="#" class="button_socials button_hover_effect linkedin" data-hovercolor="#1f75a7" data-hoveroutcolor="#1f75a7"></a>
-		
+            </div>
 		</div>
 		<div class="clear"></div>
 	</div>
@@ -479,15 +507,16 @@
 		<div class="content_slider_text_block_wrap">
 		<!-- "content_slider_text_block_wrap" is a div class for custom content -->
 			<h3>Devraj Höm Roy</h3><br /><br />
-
+<div id="clipContent">
 			<span><span class="bold">Position: </span>Machine Learning Lead designing the AI for evaluating child's learning improvement outcomes.</span><br />
 			<span><span class="bold">About: </span>Devraj is a teach for India fellow. Winner of short story competition at Jaipur Literature Festival 2015.  A gold medalist in science Olympiad.
-</span><br /><br /><br />
-	<a href="#" class="button_socials button_hover_effect fb" data-hovercolor="#496dba" data-hoveroutcolor="#3b5a9a"></a>
+    </span><br /><br /><br /></div>
+	 <div id="social">
+            <a href="#" class="button_socials button_hover_effect fb" data-hovercolor="#496dba" data-hoveroutcolor="#3b5a9a"></a>
 			<a href="#" class="button_socials button_hover_effect tw" data-hovercolor="#4bb8e7" data-hoveroutcolor="#23aae1"></a>
 			<a href="#" class="button_socials button_hover_effect gplus" data-hovercolor="#cb383b" data-hoveroutcolor="#cb383b"></a>
 			<a href="#" class="button_socials button_hover_effect linkedin" data-hovercolor="#1f75a7" data-hoveroutcolor="#1f75a7"></a>
-		
+            </div>
 		</div>
 		<div class="clear"></div>
 	</div>
@@ -497,16 +526,17 @@
 		<div class="content_slider_text_block_wrap">
 		<!-- "content_slider_text_block_wrap" is a div class for custom content -->
 			<h3>Rashi Dhanani</h3><br /><br />
-
+<div id="clipContent">
 			<span><span class="bold">Position: </span>Leads on Strategy</span><br />
 			<span><span class="bold">About: </span>Rashi is the CFO at Adhyayan Foundation, focused on re-imagining learning. Previous experience within management consulting and investment banking sectors. Holds a Msc Finance from Imperial College Business School, London.
 
-</span><br /><br /><br />
-	<a href="#" class="button_socials button_hover_effect fb" data-hovercolor="#496dba" data-hoveroutcolor="#3b5a9a"></a>
+    </span><br /><br /><br /></div>
+	 <div id="social">
+            <a href="#" class="button_socials button_hover_effect fb" data-hovercolor="#496dba" data-hoveroutcolor="#3b5a9a"></a>
 			<a href="#" class="button_socials button_hover_effect tw" data-hovercolor="#4bb8e7" data-hoveroutcolor="#23aae1"></a>
 			<a href="#" class="button_socials button_hover_effect gplus" data-hovercolor="#cb383b" data-hoveroutcolor="#cb383b"></a>
 			<a href="#" class="button_socials button_hover_effect linkedin" data-hovercolor="#1f75a7" data-hoveroutcolor="#1f75a7"></a>
-		
+            </div>
 		</div>
 		<div class="clear"></div>
 	</div>
@@ -516,17 +546,18 @@
 		<div class="content_slider_text_block_wrap">
 		<!-- "content_slider_text_block_wrap" is a div class for custom content -->
 			<h3>Dr. Amit Choudhury</h3><br /><br />
-
+<div id="clipContent">
 			<span><span class="bold">Position: </span>Leads on Strategy</span><br />
 			<span><span class="bold">About: </span>Dr. Amit is a child Psychologist. Holds Masters in Occupational Therapy. President and founder of Proyas Therapeutic Rehabilitation Centre, an NGO supporting differently abled kids.
 
 
-</span><br /><br /><br />
-	<a href="#" class="button_socials button_hover_effect fb" data-hovercolor="#496dba" data-hoveroutcolor="#3b5a9a"></a>
+    </span><br /><br /><br /></div>
+	 <div id="social">
+            <a href="#" class="button_socials button_hover_effect fb" data-hovercolor="#496dba" data-hoveroutcolor="#3b5a9a"></a>
 			<a href="#" class="button_socials button_hover_effect tw" data-hovercolor="#4bb8e7" data-hoveroutcolor="#23aae1"></a>
 			<a href="#" class="button_socials button_hover_effect gplus" data-hovercolor="#cb383b" data-hoveroutcolor="#cb383b"></a>
 			<a href="#" class="button_socials button_hover_effect linkedin" data-hovercolor="#1f75a7" data-hoveroutcolor="#1f75a7"></a>
-		
+            </div>
 		</div>
 		<div class="clear"></div>
 	</div>
@@ -536,15 +567,16 @@
 		<div class="content_slider_text_block_wrap">
 		<!-- "content_slider_text_block_wrap" is a div class for custom content -->
 			<h3>Ajit Sharma</h3><br /><br />
-
+<div id="clipContent">
 			<span><span class="bold">Position: </span>Graphics Design Lead</span><br />
 			<span><span class="bold">About: </span>Ajit is pursuing B-Tech in Information Technology. Specializes in creative design and branding.
-</span><br /><br /><br />
-	<a href="#" class="button_socials button_hover_effect fb" data-hovercolor="#496dba" data-hoveroutcolor="#3b5a9a"></a>
+    </span><br /><br /><br /></div>
+	 <div id="social">
+            <a href="#" class="button_socials button_hover_effect fb" data-hovercolor="#496dba" data-hoveroutcolor="#3b5a9a"></a>
 			<a href="#" class="button_socials button_hover_effect tw" data-hovercolor="#4bb8e7" data-hoveroutcolor="#23aae1"></a>
 			<a href="#" class="button_socials button_hover_effect gplus" data-hovercolor="#cb383b" data-hoveroutcolor="#cb383b"></a>
 			<a href="#" class="button_socials button_hover_effect linkedin" data-hovercolor="#1f75a7" data-hoveroutcolor="#1f75a7"></a>
-		
+            </div>
 		</div>
 		<div class="clear"></div>
 	</div>
@@ -563,9 +595,14 @@
 	<ul class="tab__content">
 		<li class="active">
 			<div class="content__wrapper">
-                  <div id="textt">
-                <span><font size="3" color="#c5c5c5" style="opacity:0.7;">Under Construction&hellip;</font></span>
-                </div>
+                   <div class="container">
+                        <div class="row">
+                            <div class="col-sm-8 blog-main">
+                                    <div class="main-container" style="color:black;">
+                                    </div>        
+                            </div>
+                       </div>
+                    </div><!-- /.container -->
 			</div>
 		</li>
 		<li>
@@ -580,40 +617,50 @@
  </div>
     <!---Join us section-->
     <div class="section" id="section7">
-		<div class="content" style="padding-top:20%;">
-			<h1>Team Krishna</h1>
-			<p>Redifining education with the promise of freedom.</p>
-
+		<div class="content" style="margin-top:30%;" >
+			 <div class='portrait-container'>
+  <h1>'Come, join us in our effort to revolutionize pedagogy'</h1>
+  <h2>Redefining education with the promise of freedom, join us as a sponsor or as a volunteer.</h2>
+    <a href="#" class="button" style="bottom: 20px; z-index:20; margin:0 auto;">Join Us today</a>
+</div>
 		</div>
 	</div>
     <!--- Contact Us section -->
 	<div class="section" id="section2">
 		<div class="content" style="padding:5%;">
-			  <div class="main" id="main">
-  <div class="countries-top" id="countries-top"></div>
-  <div class="countries-bottom" id="countries-bottom"></div>
-  <div id="spinner">
-    <canvas id="map" height="430" width="430"></canvas>
-  </div>
-</div>
+			  
 		</div>
+        <div id="footer">Designed and developed by <a href="developers.html" style="color:white; z-index:5;">Developers</a></div>
 	</div>
+    
 </div>
 <!---Content over here-->
-
 <!---Scripts -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
 <!--
 	<script src="js/jquery.jc.videogallery.js"></script>
 	<script src="js/master.js"></script>
 -->
+
     <script src='http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js'></script>
     <script src='http://packery.metafizzy.co/packery.pkgd.js'></script>
     <script type="text/javascript" src="javascript.fullPage.js"></script>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="js/index.js"></script>
-      <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.content_slider.js"></script>
+            <!--Blog add temp script-->
+    <script id="blogs-tpl" type="text/x-handlebars-template">
+    {{#each blog}}
+    <div class="blog-post">
+        <h2 class="blog-post-title"><a href="#">{{Title}}</a></h2>
+        <p class="blog-post-meta">At time by an author</p>
+        <div>{{{Content}}}</div>
+    </div>
+    {{/each}}
+</script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/blog.js"></script>
       <!--based on page highlighting the text-->
 <script type="text/javascript">
  var image_array = new Array();
@@ -666,23 +713,35 @@
 	});
 
 </script>
-      <!---Background Image slideshow-->
-<!--
+      <!---Background video-->
 <script>
-          //Array of images which you want to show: Use path you want.
-          var images=new Array('img/first.png','img/second.png','img/third.png','img/four.png');
-          var nextimage=0;
-          doSlideshow();
-//todo change the bar color and only the active bar will have different color
-            function doSlideshow(){
-                if(nextimage>=images.length){nextimage=0;}
-                $('#section0')
-                .css('background-image','url("'+images[nextimage++]+'")')
-                .fadeIn(3000,function(){
-                    setTimeout(doSlideshow,3000);
-                });
-            }
+        var vid = document.getElementById("bgvid");
+var pauseButton = document.querySelector("#polina button");
+
+function vidFade() {
+  vid.classList.add("stopfade");
+}
+
+vid.addEventListener('ended', function()
+{
+// only functional if "loop" is removed 
+vid.pause();
+// to capture IE10
+vidFade();
+}); 
+
+
+pauseButton.addEventListener("click", function() {
+  vid.classList.toggle("stopfade");
+  if (vid.paused) {
+    vid.play();
+    pauseButton.innerHTML = "Pause Video";
+  } else {
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+  }
+})
 </script>
--->
+      
 </body>
 </html>
