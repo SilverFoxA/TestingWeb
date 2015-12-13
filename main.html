@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
     <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css'>
     <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
        <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -20,6 +22,7 @@
         <!-- Handlebars.js -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   
   </head>
 <style>
 		/* Reset CSS
@@ -458,7 +461,93 @@ ul.tags li a:hover {
     color:black;
     text-align: left;
     }
-	</style>
+    
+    
+.sliders{
+	width: 640px; /*Same as width of the large image*/
+    height: 320px;
+	position: relative;
+	/*Instead of height we will use padding*/
+	padding-top: 320px; /*That helps bring the labels down*/
+	
+	margin: 100px auto;
+	
+	/*Lets add a shadow*/
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+
+/*Last thing remaining is to add transitions*/
+.sliders>img{
+	position: absolute;
+	left: 0; top: 0;
+	transition: all 0.5s;
+}
+
+.sliders input[name='slide_switch'] {
+	display: none;
+}
+
+.sliders label {
+	/*Lets add some spacing for the thumbnails*/
+	margin: 15px 0 0 5px;
+	border: 1px solid #999;
+	
+	float: left;
+	cursor: pointer;
+	transition: all 0.5s;
+	
+	/*Default style = low opacity*/
+	opacity: 0.6;
+}
+
+.sliders label img{
+	display: block;
+}
+
+/*Time to add the click effects*/
+.sliders input[name='slide_switch']:checked+label {
+	border-color: #666;
+	opacity: 1;
+}
+/*Clicking any thumbnail now should change its opacity(style)*/
+/*Time to work on the main images*/
+.sliders input[name='slide_switch'] ~ img {
+	opacity: 0;
+	transform: scale(1.1);
+}
+/*That hides all main images at a 110% size
+On click the images will be displayed at normal size to complete the effect
+*/
+.sliders input[name='slide_switch']:checked+label+img {
+	opacity: 1;
+	transform: scale(1);
+}
+/*Clicking on any thumbnail now should activate the image related to it*/
+
+/*We are done :)*/  
+    
+    .demo {
+    width:450px;
+}
+.demo ul {
+    list-style: none outside none;
+    padding-left: 0;
+    margin-bottom:0;
+}
+.demo li {
+    display: block;
+    float: left;
+    margin-right: 6px;
+    cursor:pointer;
+}
+.demo img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+    
+</style>
     
   <body>
 <!--Navigation-->
@@ -740,7 +829,7 @@ ul.tags li a:hover {
 	<ul class="tab__content">
 		<li class="active">
 			<div class="content__wrapper">
-                <div style="color:black; font-size:100%;margin-top:20px;right:30px;position:absolute;"><a href="blog.html">Check out more posts</a></div>
+                <div style="color:black; font-size:100%;margin-top:5px;right:30px;position:absolute;z-index:100;"><a href="blog.html">Check out more posts</a></div>
                     <div class="wrap">
         <div class="main-container">
                 </div>        
@@ -749,9 +838,29 @@ ul.tags li a:hover {
 		</li>
 		<li>
 			<div class="content__wrapper">
-				<h2 class="text-color">Media</h2>
+				   <!-- images -->
+                    <div id="images">
+                        <!-- pagination -->
+                        <div id="pagination">
+                            <ul id="pagination-ul"></ul>
+                        </div>
+                        <table id="images-ul"></table>
+                    </div>
 
-				<p>by silverFoxA</p>
+                    <!-- page switcher -->
+                    <div id="pre" onclick="goPrePage()">
+                        <a>&lt;</a>
+                    </div>
+                    <div id="next" onclick="goNextPage()">
+                        <a>&gt;</a>
+                    </div>
+
+                    <!-- top -->
+                    <div id="top">
+                        <a href="#">
+                            <span>&uarr;</span>
+                        </a>
+                    </div>
 			</div>
 		</li>
 	</ul>
@@ -770,7 +879,7 @@ ul.tags li a:hover {
     <!--- Contact Us section -->
 	<div class="section" id="section2">
 		<div class="content" style="padding:5%;">
-			  
+            
 		</div>
         <div id="footer">Designed and developed by <a href="developers.html" style="color:white; z-index:5;">Developers</a></div>
 	</div>
@@ -778,16 +887,15 @@ ul.tags li a:hover {
 </div>
 <!---Content over here-->
 <!---Scripts -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
 <!--
 	<script src="js/jquery.jc.videogallery.js"></script>
 	<script src="js/master.js"></script>
 -->
-
+      
+    <script src='http://sachinchoolur.github.io/lightslider/dist/js/lightslider.js'></script>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js'></script>
     <script src='http://packery.metafizzy.co/packery.pkgd.js'></script>
     <script type="text/javascript" src="javascript.fullPage.js"></script>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="js/index.js"></script>
     <script src="js/jquery.content_slider.js"></script>
             <!--Blog add temp script-->
@@ -845,7 +953,7 @@ ul.tags li a:hover {
 });
       </script>
       <!--based on page highlighting the text-->
-<script type="text/javascript">
+    <script type="text/javascript">
  var image_array = new Array();
  //<!--Change the link when pushing it to public release-->
 			image_array = [
@@ -881,7 +989,7 @@ ul.tags li a:hover {
 			});
 </script>
     <!---fullpage.js scripts-->
-<script type="text/javascript">
+    <script type="text/javascript">
     var slideTimeout;
 	fullpage.initialize('#fullpage', {
 		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage','joinus', 'lastPage','last'],
@@ -897,7 +1005,7 @@ ul.tags li a:hover {
 
 </script>
       <!---Background video-->
-<script>
+    <script>
 var vid = document.getElementById("bgvid");
 var pauseButton = document.querySelector("#polina button");
 
@@ -925,6 +1033,7 @@ pauseButton.addEventListener("click", function() {
   }
 })
 </script>
-      
+        <!---Image gallery js -->
+      <script src="./js/imagegallery.js"></script>
 </body>
 </html>

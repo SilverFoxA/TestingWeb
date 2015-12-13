@@ -17,7 +17,11 @@ html, body {
   width: 100%;
   background-color: black;
 }
-
+    nice{
+        position: absolute;
+        width: 90%;
+        height: 90%;
+    }
 .container {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -201,6 +205,7 @@ html, body {
 	</style>
     </head>
 <body>
+    <div id="nice">
     <div class='container'>    
     	<div class='cube'>
 	        <div class='face front'>
@@ -271,6 +276,7 @@ html, body {
 	        </div>
     	</div>
     </div>
+        </div>
             <div id="texts">
             <h1><font color="white" style="opacity:1;">Team Krishna</font></h1>
             <p><font color="white"><span><img src="img/left.png" style="width:5%; height:1.3%; padding-right:10px;" /></span><span>Redifining education with the promise of freedom.</span><span><img src="img/right.png" style="width:5%; height:1.3%; padding-left:10px;" /></span></font></p>
@@ -289,10 +295,9 @@ $(document).ready(function(){
 
 	var shift = "";
 
-    
-    paint();
-
 		var input = 'R2L2F2B2U2D2';
+     paint();
+
 				//Strip chars that would be impossibru and also whitespace
     parseMoves(input);
     
