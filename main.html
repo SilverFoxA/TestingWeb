@@ -319,30 +319,6 @@
 .wrap {
   width: 75%;
   margin: 25px auto;
-
-}
-
-/* Let's get this party started */
-::-webkit-scrollbar {
-    width: 12px;
-}
- 
-/* Track */
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background: rgba(255,0,0,0.8); 
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-}
-::-webkit-scrollbar-thumb:window-inactive {
-	background: rgba(255,0,0,0.4); 
 }
 .post {
   width: 100%;
@@ -482,29 +458,6 @@ ul.tags li a:hover {
     color:black;
     text-align: left;
     }
-    
-    
-    ::-webkit-scrollbar {
-    width: 12px;
-}
- 
-/* Track */
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background: rgba(255,0,0,0.8); 
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-}
-::-webkit-scrollbar-thumb:window-inactive {
-	background: rgba(255,0,0,0.4); 
-}
 	</style>
     
   <body>
@@ -787,6 +740,7 @@ ul.tags li a:hover {
 	<ul class="tab__content">
 		<li class="active">
 			<div class="content__wrapper">
+                <div style="color:black; font-size:100%;margin-top:20px;right:30px;position:absolute;"><a href="blog.html">Check out more posts</a></div>
                     <div class="wrap">
         <div class="main-container">
                 </div>        
@@ -842,12 +796,12 @@ ul.tags li a:hover {
     <div class="post">
         <article>
             <header>
-                <h2 id="title"><a href="#">{{Title}}</a></h2>
+                <h2 id="title"><a href="blog.html">{{Title}}</a></h2>
                 <p class="author-cred">by {{Author}} on {{Date}}</p>
             </header>
-            <p id="content" style="margin: 10px;">{{{Content}}}</p>  
+            <p id="content" style=" margin: 10px;">{{{Content}}}</p>  
             <footer>
-                <a href="#" class="more-link">Read More</a>
+                <a href="blog.html" class="more-link">Read More</a>
             </footer>
         </article>
     </div>
@@ -855,7 +809,41 @@ ul.tags li a:hover {
       </script>
       <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/blog.js"></script>
+    <script type="text/javascript" >
+      
+        $(function() {
+ 
+    Parse.$ = jQuery;
+ 
+    // Replace this line with the one on your Quickstart Guide Page
+   Parse.initialize("hvGvRESwylWuTrwAMPYVDmi45cOlqZ6Cbk0NIBpj", "C4yHoHBDRRdu1mdRrorWX8xscLmQqbjN01Qo8OMH");
+
+ 
+    var Blog = Parse.Object.extend("Blog");
+    var Blogs =  Parse.Collection.extend({
+			model: Blog,
+			query: (new Parse.Query(Blog)).descending('createdAt').limit(2)
+		});
+    var blogs = new Blogs();
+    blogs.fetch({
+   success: function(blogs) {
+    var blogsView = new BlogsView({ collection: blogs });
+    blogsView.render();
+    $('.main-container').html(blogsView.el);
+   },
+    error: function(blogs, error) {
+        console.log(error);
+    }
+});
+      var BlogsView =  Parse.View.extend({
+    template: Handlebars.compile($('#blogs-tpl').html()),
+    render: function(){ 
+        var collection = { blog: this.collection.toJSON() };
+        this.$el.html(this.template(collection));
+    }
+});
+});
+      </script>
       <!--based on page highlighting the text-->
 <script type="text/javascript">
  var image_array = new Array();
