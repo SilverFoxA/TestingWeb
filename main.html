@@ -140,7 +140,6 @@
 			color: #F2F2F2;
 		}
 		#section3 p{
-            margin: 10px;
 			color: black;
             text-align: left;
 		}
@@ -320,6 +319,30 @@
 .wrap {
   width: 75%;
   margin: 25px auto;
+
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4); 
 }
 .post {
   width: 100%;
@@ -459,6 +482,29 @@ ul.tags li a:hover {
     color:black;
     text-align: left;
     }
+    
+    
+    ::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4); 
+}
 	</style>
     
   <body>
@@ -799,7 +845,7 @@ ul.tags li a:hover {
                 <h2 id="title"><a href="#">{{Title}}</a></h2>
                 <p class="author-cred">by {{Author}} on {{Date}}</p>
             </header>
-            <p id="content">{{{Content}}}</p>  
+            <p id="content" style="margin: 10px;">{{{Content}}}</p>  
             <footer>
                 <a href="#" class="more-link">Read More</a>
             </footer>
