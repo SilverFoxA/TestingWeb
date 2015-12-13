@@ -4,9 +4,94 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/style.css">
     	<link rel="stylesheet" type="text/css" href="javascript.fullPage.css" />
-</head>
+  <link rel="stylesheet" href="css/normalize.css">
 
-	<style>
+    
+<style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      /******************************
+* STYLESHEET MA551V3 ~~~
+*******************************/
+
+html, body {
+  height: 100%;
+  width: 100%;
+  
+}
+
+.container {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  margin: auto;
+	width: 200px;
+	height: 200px;
+	perspective: 1000px;
+	user-select: none;   
+}
+
+.cube { 
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform: rotateY(45deg) rotateX(-15deg) rotateZ(-15deg); 
+	transform-style: preserve-3d;  
+}
+
+.face {
+	position: absolute;
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background: #111;
+}
+
+.face.front { transform: translateZ(100px); }
+.face.right { transform: rotateY(90deg) translateZ(100px); }
+.face.left { transform: rotateY(-90deg) translateZ(100px); }
+.face.back {transform:  translateZ(-100px); }
+.face.up { transform: rotateX(90deg) translateZ(100px); }
+.face.down { transform: rotateX(-90deg) translateZ(100px); }
+
+.sticker {
+	float: left;
+	background: #aaa;
+	box-shadow: 0 5px 5px rgba(255,255,255,0.1) inset, inset 0 -5px 5px rgba(0,0,0,0.1);
+	width: 33%;
+	height: 33%;
+	margin: 0;
+	padding: 0;
+}
+
+/******************************
+* Rounded corners, Dayan style.
+*******************************/
+.sticker.tl { border-radius: 0 0 15% 0; margin-right: 0.5%;}
+.sticker.tc { border-radius: 0 0 15% 15%;  margin-right: 0.5%;}
+.sticker.tr { border-radius: 0 0 0 15%; 	}
+.sticker.l  { border-radius: 0 15% 15% 0; margin: 0.5% 0;}
+.sticker.c  { border-radius: 15%; margin: 0.5%; }
+.sticker.r  { border-radius: 15% 0 0 15%; margin: 0.5% 0; }
+.sticker.bl { border-radius: 0 15% 0 0;  margin-right: 0.5%;}
+.sticker.bc { border-radius: 15% 15% 0 0;  margin-right: 0.5%; }
+.sticker.br { border-radius: 15% 0 0 0; 	}
+
+/******************************
+* Official Rubik's colours
+*******************************/
+.cRed    { background: #C41E3A; }
+.cOrange { background: #FF5800; }
+.cGreen  { background: #009E60; }
+.cBlue   { background: #0051BA; }
+.cYellow { background: #FFD500; }
+.cWhite  { background: #FFFFFF; }
+
+    </style>
+    
+<script src="js/prefixfree.min.js"></script>
+
+<style>
 		/* Reset CSS
 		 * --------------------------------------- */
 		body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
@@ -122,35 +207,98 @@
         }
 
 	</style>
+    </head>
 <body>
+<!--
     <div id="fullpage">
 	<div class="section " id="section9">
 		<div class="content">
-             <div class="layers accelero" data-control-method="touch" data-max-angle="1" data-speed="0.15">
-
-  <div class="layer layer-4"></div>
-
-  <div class="layer layer-3"></div>
-
-<!--  <div class="layer layer-2"></div>-->
-
-  <div class="layer layer-1"></div>
-
-</div>
+-->
+    <div class='container'>    
+    	<div class='cube'>
+	        <div class='face front'>
+	            <div class='sticker tl'></div>
+	            <div class='sticker tc'></div>
+	            <div class='sticker tr'></div>
+	            <div class='sticker l'></div>
+	            <div class='sticker c'></div>
+	            <div class='sticker r'></div>
+	            <div class='sticker bl'></div>
+	            <div class='sticker bc'></div>
+	            <div class='sticker br'></div>
+	        </div>
+	        <div class='face left'>
+	            <div class='sticker tl'></div>
+	            <div class='sticker tc'></div>
+	            <div class='sticker tr'></div>
+	            <div class='sticker l'></div>
+	            <div class='sticker c'></div>
+	            <div class='sticker r'></div>
+	            <div class='sticker bl'></div>
+	            <div class='sticker bc'></div>
+	            <div class='sticker br'></div>
+	        </div>
+	         <div class='face right'>
+	            <div class='sticker tl'></div>
+	            <div class='sticker tc'></div>
+	            <div class='sticker tr'></div>
+	            <div class='sticker l'></div>
+	            <div class='sticker c'></div>
+	            <div class='sticker r'></div>
+	            <div class='sticker bl'></div>
+	            <div class='sticker bc'></div>
+	            <div class='sticker br'></div>
+	        </div>
+	        <div class='face back'>
+	            <div class='sticker tl'></div>
+	            <div class='sticker tc'></div>
+	            <div class='sticker tr'></div>
+	            <div class='sticker l'></div>
+	            <div class='sticker c'></div>
+	            <div class='sticker r'></div>
+	            <div class='sticker bl'></div>
+	            <div class='sticker bc'></div>
+	            <div class='sticker br'></div>
+	        </div>
+            <div class='face up'>
+	            <div class='sticker tl'></div>
+	            <div class='sticker tc'></div>
+	            <div class='sticker tr'></div>
+	            <div class='sticker l'></div>
+	            <div class='sticker c'></div>
+	            <div class='sticker r'></div>
+	            <div class='sticker bl'></div>
+	            <div class='sticker bc'></div>
+	            <div class='sticker br'></div>
+	        </div>
+            <div class='face down'>
+	            <div class='sticker tl'></div>
+	            <div class='sticker tc'></div>
+	            <div class='sticker tr'></div>
+	            <div class='sticker l'></div>
+	            <div class='sticker c'></div>
+	            <div class='sticker r'></div>
+	            <div class='sticker bl'></div>
+	            <div class='sticker bc'></div>
+	            <div class='sticker br'></div>
+	        </div>
+    	</div>
+    </div>
             <div id="texts">
             <h1><font color="white" style="opacity:1;">Team Krishna</font></h1>
             <p><font color="white"><span><img src="img/left.png" style="width:5%; height:1.3%; padding-right:10px;" /></span><span>Redifining education with the promise of freedom.</span><span><img src="img/right.png" style="width:5%; height:1.3%; padding-left:10px;" /></span></font></p>
            <br><br>
             <font  id="some" size="4" style="margin-top:90%; text-align:center; margin-top:20px;"><a href="main.html"><font color="white">Enter the website</font></a></font>
             </div>
-
+<!--
 		</div>
 	</div>
     </div>
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+-->
+     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="js/index.js"></script>
 
-    <script type="text/javascript" src="javascript.fullPage.js"></script>
+<!--    <script type="text/javascript" src="javascript.fullPage.js"></script>-->
 <script type="text/javascript">
 	fullpage.initialize('#fullpage', {
 		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
@@ -159,5 +307,296 @@
 	});
 
 </script>
+    
+    <script>
+    
+    //Need to rewrite this code badly
+$(document).ready(function(){
+
+	var shift = "";
+
+	//Input interaction
+	$('input[type="text"]').keyup(function(){
+		paint();
+
+		var input = $(this).val();
+				//Strip chars that would be impossibru and also whitespace
+    parseMoves(input);
+    
+	});
+	
+	//trigger keyup
+	$('input[type="text"]').keyup();
+
+	//Keyboard
+	$(document).keydown(function(event){
+		if(!$('input[type="text"]').is(':focus')){
+			val = $('input').val();
+			switch(event.keyCode){
+				case 16:
+					shift = "'";
+				break;
+        case 76:
+          parseMoves("L"+shift+"");
+        break;
+				case 82:
+					parseMoves("R"+shift+"");
+				break;
+				case 85:
+					parseMoves("U"+shift+"");
+				break;
+        case 68:
+          parseMoves("D"+shift+"");
+        break;
+        case 70:
+          parseMoves("F"+shift+"");
+        break;
+        case 66:
+          parseMoves("B"+shift+"");
+        break;
+			}
+		}
+	});
+	$(document).keyup(function(event){
+		if(event.keyCode === 16){
+			shift = "";
+		}
+	});
+
+	//Mouse interaction
+	$(document).mousemove(function(event) {
+		x = event.pageX;
+		y = event.pageY;
+		w = $(window).width() / 2;
+		h = $(window).height() / 2;
+		x = (x - w);
+		y = -(y - h);
+		$('.cube').css('transform','rotateY('+x+'deg) rotateX('+y+'deg)');
+	});
+
+
+	
+	$('input[name="favcolor"]').change(function(){
+		c = $(this).val();
+		$('.sticker').css('box-shadow','0 5px 8px rgba(255,255,255,0.2) inset, inset 0 -5px 8px rgba(0,0,0,0.2), 0 0 0 5px '+c+' inset');
+	});
+
+});
+
+function doMove(face) {
+		var faces, stickers;
+		switch(face){
+			case 'U':
+				faces = ['front','left','back','right'],
+				faces2 = 'up',stickers = ['tr','tc','tl'],
+				stickers2 = [['br','bl','tl','tr'], ['bc','l','tc','r']];
+			break;
+			case 'U\'':
+				faces = ['front','right','back','left'],
+				faces2 = 'up',
+				stickers = ['tl','tc','tr'],
+				stickers2 = [['bl','br','tr','tl'], ['bc','r','tc','l']];
+			break;
+			case 'D':
+				faces = ['front','right','back','left'],
+				faces2 = 'down',
+				stickers = ['bl','bc','br'],
+				stickers2 = [['br','bl','tl','tr'], ['bc','l','tc','r']];
+			break;
+			case 'D\'':
+				faces = ['front','left','back','right'],
+				faces2 = 'down',
+				stickers = ['br','bc','bl'],
+				stickers2 = [['bl','br','tr','tl'], ['bc','r','tc','l']];
+			break;
+			case 'R':
+				faces = ['front','up','back','down'],
+				faces2 = 'right',
+				stickers = ['br','r','tr'],
+				stickers2 = [['br','bl','tl','tr'], ['bc','l','tc','r']];
+			break;
+			case 'R\'':
+				faces = ['front','down','back','up'],
+				faces2 = 'right',
+				stickers = ['tr','r','br'],
+				stickers2 = [['bl','br','tr','tl'], ['bc','r','tc','l']];
+			break;
+			case 'L\'':
+				faces = ['front','up','back','down'],
+				faces2 = 'left',
+				stickers = ['tl','l','bl'],
+				stickers2 = [['bl','br','tr','tl'], ['bc','r','tc','l']];
+			break;
+			case 'L':
+				faces = ['front','down','back','up'],
+				faces2 = 'left',
+				stickers = ['bl','l','tl'],
+				stickers2 = [['br','bl','tl','tr'], ['bc','l','tc','r']];
+			break;
+			case 'E':
+				faces = ['front','left','back','right'],
+				faces2 = '',
+				stickers = ['l','c','r'];
+			break;
+			case 'E\'':
+				faces = ['front','right','back','left'],
+				faces2 = '',
+				stickers = ['r','c','l'];
+				break;
+			default:
+				return false;
+		}
+
+		//Need some pro cube rotations
+
+		
+		//Grab current positions and remove them.#
+		var pos = [];
+		for(var j = 0; j<stickers.length; j++){
+			//How many stickers positions?
+			pos.push([]);
+			for(var i = 0; i<faces.length;  i++){
+				face = $('.'+faces[i]+' > .sticker.'+stickers[j]+'');
+				//Get the class (colour) of a sticker face
+				str = face.attr('class');
+				//We only want the colour class
+				str = str.substring(10);
+				//Slap it into the array
+				pos[j].push(str);
+				//Stored nice and safely so we can remove it from the actual cube.
+				face.removeClass(pos[j][i]);
+			}
+		}
+		//Replace permuted.
+		for(j = 0; j<stickers.length; j++){
+			for(var i = 0; i<faces.length;  i++){
+				q = j;
+				if(i === 0){ //If we're at the end of the array
+					p = faces.length - 1;
+				}else{
+					p = i-1;
+				}
+				if(i == faces.length - 1 || i == faces.length - 2){	//Account for rendering quirk
+					if(j === 0) { q = 2; }
+					if(j === 2) { q = 0; }
+				}
+				//Add permuted sticker face colour
+				$('.'+faces[i]+' > .sticker.'+stickers[j]+'').addClass(pos[q][p]);
+			}
+		}
+		//This is the FACE side
+		if(faces2){
+			var pos2 = [[],[]];
+			for(var a = 0;a<stickers2.length;a++){
+				for(var b = 0;b<stickers2[a].length;b++){
+					face = $('.'+faces2+' > .sticker.'+stickers2[a][b]+'');
+					str = face.attr('class');
+					str = str.substring(10);
+					pos2[a].push(str);
+					face.removeClass(pos2[a][b]);
+				}
+				for(b = 0;b<stickers2[a].length;b++){
+					if(b === 0){
+						p = stickers2[a].length - 1;
+					}else{
+						p = b - 1;
+					}
+
+					$('.'+faces2+' > .sticker.'+stickers2[a][b]+'').addClass(pos2[a][p]);
+				}
+			}
+		}
+
+		//DID YOU SOLVE IT SON?
+		if(isSolved()){
+			alert('Are you a wizard?');
+		}
+	}
+
+function paint() {
+		//Resets the cube and gives it a solved state.
+		$('.cGreen').removeClass('cGreen');
+		$('.cBlue').removeClass('cBlue');
+		$('.cRed').removeClass('cRed');
+		$('.cOrange').removeClass('cOrange');
+		$('.cWhite').removeClass('cWhite');
+		$('.cYellow').removeClass('cYellow');
+
+		$('.front').find('.sticker').addClass('cGreen');
+		$('.back').find('.sticker').addClass('cBlue');
+		$('.right').find('.sticker').addClass('cRed');
+		$('.left').find('.sticker').addClass('cOrange');
+		$('.up').find('.sticker').addClass('cWhite');
+		$('.down').find('.sticker').addClass('cYellow');
+}
+
+function isSolved(){
+	f = [$('.front').find('.cGreen'),
+		   $('.back').find('.cBlue'),
+		   $('.right').find('.cRed'),
+		 $('.left').find('.cOrange'),
+		    $('.up').find('.cWhite'),
+		 $('.down').find('.cYellow')];
+
+	for(var x = 0;x<f.length;x++){
+		if(f[x].length != 9){
+			return false;
+		}
+	}
+	return true;
+}
+
+function parseMoves(input) {
+  		input = input.replace(/[^FBUDLRXYZESMfbudlrxyzesm\'2]/g,"");
+		//Split each char up into an array.
+		input = input.split("");
+
+		//Make string into an array.
+		for(var i = 0; i < input.length;i++){
+
+			switch(input[i]){
+			
+				case "2":
+					input[i] = input[i-1];
+				break;
+				case "'":
+					input[i-1] = input[i-1]+"'";
+					input.splice(i,1);
+				break;
+			}
+
+		}
+		for(i = 0; i < input.length;i++){
+
+			switch(input[i]){
+			
+				case "F":
+					input[i] = "E'";
+					input.splice(i+1,0,"U'","D","R","D'","U","E");
+				break;
+				case "F'":
+					input[i] = "E'";
+					input.splice(i+1,0,"U'","D","R'","D'","U","E");
+				break;
+				case "B":
+					input[i] = "E";
+					input.splice(i+1,0,"U","D'","R","D","U'","E'");
+				break;
+				case "B'":
+					input[i] = "E";
+					input.splice(i+1,0,"U","D'","R'","D","U'","E'");
+				break;
+				case "Y":
+					input[i] = "E";
+					input.splice(i+1,0,"U","D'");
+				break;
+			}
+
+		}
+		for(i = 0; i < input.length;i++){
+			doMove(input[i]);
+		}
+}
+    </script>
 </body>
 </html>
