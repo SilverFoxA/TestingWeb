@@ -860,8 +860,8 @@ $($btn).click(function(){
       } else{
       $nav.css('background-color','transparent');
          //   document.getElementById("containerID").style.visibility="visible";
-           $team.css('color','#000');
-          $nav_a.css('color','#000');
+           $team.css('color','#fff');
+          $nav_a.css('color','#fff');
            $btn.css('color','#000');
 ////          $details.remove('bottom');
 ////          $details.css('right',0);

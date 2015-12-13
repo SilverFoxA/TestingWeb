@@ -14,7 +14,7 @@ nav.greedy h1 {
   align-items: center;
      background-color: transparent;
 /*  background: #f57c00;*/
-  color: #000;
+  color: #005af2;
   padding: 0 1.5rem;
   font-weight: bold;
 }
@@ -1170,7 +1170,7 @@ float: left;
 
 #section23 {
     z-index: 7;
-    backgroug-color: white;
+    background-color: #CCC;
 }
 
 #video_here {
@@ -1186,7 +1186,7 @@ float: left;
     height: 100%;
     background-position: center;
     position: relative;
-    background-image: url('../img/first.png');
+    background-image: url('../img/header/Copy%20of%20Global%20Learning%20Xprize%20pic3.jpg');
     background-size: cover;
 }
 
@@ -1195,7 +1195,7 @@ float: left;
     height: 100%;
     background-position: center;
     position: relative;
-    background-image: url('../img/second.png');
+    background-image: url('../img/header/Copy%20of%204.jpg');
     background-size: cover;
 }
 
@@ -1204,7 +1204,7 @@ float: left;
     height: 100%;
     background-position: center;
     position: relative;
-    background-image: url('../img/third.png');
+    background-image: url('../img/header/Copy%20of%20405650_345913492184086_1335891273_n.jpg');
     background-size: cover;
 }
 
@@ -1213,7 +1213,7 @@ float: left;
     height: 100%;
     background-position: center;
     position: relative;
-    background-image: url('../img/four.png');
+    background-image: url('../img/header/Copy%20of%20_DSC8745.JPG');
     background-size: cover;
 }
 
@@ -1697,7 +1697,7 @@ float: left;
     min-width: 100%;
     min-height: 100%;
     width: auto;
-    height: 100%;
+    height: auto;
     z-index: -100;
 /*
     -webkit-transform: translateX(-50%) translateY(-50%);
@@ -2058,3 +2058,7 @@ float: left;
 }
 
 
+
+#section7 {
+    background-color: #CCC;
+}
