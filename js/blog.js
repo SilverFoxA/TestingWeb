@@ -7,9 +7,10 @@
 
  
     var Blog = Parse.Object.extend("Blog");
-    var Blogs = Parse.Collection.extend({
-    model: Blog
-});
+    var Blogs =  Parse.Collection.extend({
+			model: Blog,
+			query: (new Parse.Query(Blog)).descending('createdAt')
+		});
     var blogs = new Blogs();
     blogs.fetch({
    success: function(blogs) {
