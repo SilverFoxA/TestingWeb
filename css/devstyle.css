@@ -1,0 +1,224 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+body, html {
+  font: 400 1em/1 "PT Sans";
+  color: Grey;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+}
+
+h1 {
+  font: 400 2em/1 "PT Sans";
+  text-transform: uppercase;
+  margin: 1.5em 0 0.3em;
+}
+
+strike {
+  opacity: 0.5;
+}
+
+h2 {
+  font: 400 0.75em/1 "PT Sans";
+  margin: 0 0 4em;
+}
+
+[class*="fontawesome-"]:before {
+  font-family: "FontAwesome", sans-serif;
+  color: SteelBlue;
+  margin-right: 0.3em;
+}
+
+.fontawesome-phone a {
+  text-decoration: none;
+}
+
+.portrait-container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+.portrait-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.portrait {
+  height: 5rem;
+  width: 5rem;
+  -moz-border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  border-radius: 2.5rem;
+  display: inline-block;
+  position: relative;
+  margin: 1em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.portrait:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+.portrait-details {
+  white-space: nowrap;
+  cursor: text;
+  position: absolute;
+  list-style-type: none;
+  padding: 0;
+  bottom: 3.5rem;
+  background: white;
+  border: solid 1px SteelBlue;
+  -moz-box-shadow: 0 3px 7px 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 3px 7px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 7px 1px rgba(0, 0, 0, 0.3);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+@media all and (max-width: 64em) {
+  .portrait-details {
+    white-space: normal;
+    margin-left: 2.5rem;
+    min-width: 14rem;
+  }
+}
+.portrait-details:before {
+  content: "";
+  position: absolute;
+  height: 2em;
+  width: 100%;
+  bottom: -2em;
+}
+.portrait-details:after {
+  content: "";
+  display: inline-block;
+  background-color: #fff;
+  border-bottom: 1px solid SteelBlue;
+  border-right: 1px solid SteelBlue;
+  bottom: -6px;
+  height: 10px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  width: 10px;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.show .portrait-details {
+  bottom: 5.5rem;
+  opacity: 1;
+  visibility: visible;
+}
+
+.portrait-details li {
+  color: Grey;
+  padding: 0.3em 1.9em;
+  font: 400 0.8em/1 "PT Sans";
+}
+.portrait-details li:first-child {
+  font: 700 1em/1 "PT Sans";
+  padding: 0.6em 1.5em;
+  color: #fff;
+  border-bottom: solid 1px #fff;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuMCIgeDI9IjEuMCIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ2ODJiNCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzhkYjNkMyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #4682b4), color-stop(100%, #8db3d3));
+  background-image: -moz-linear-gradient(left top, #4682b4, #8db3d3);
+  background-image: -webkit-linear-gradient(left top, #4682b4, #8db3d3);
+  background-image: linear-gradient(to right bottom, #4682b4, #8db3d3);
+  -moz-border-radius-topleft: 3px;
+  -webkit-border-top-left-radius: 3px;
+  border-top-left-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.portrait-details li:last-child {
+  border-bottom: none;
+  padding-bottom: 1.5em;
+}
+.portrait-details li:nth-child(2) {
+  color: Grey;
+  padding: 1.5em 1.9em 0.7em;
+  font-weight: 700;
+}
+.portrait-details li a {
+  color: SteelBlue;
+  cursor: pointer;
+}
+
+.abhijit {
+  background-image: url(../img/ourteam/unknown-person.png);
+}
+
+.ajit {
+ background-image: url(../img/ourteam/unknown-person.png);
+}
+
+.irfan {
+  background-image: url(../img/ourteam/unknown-person.png);
+}
+
+.jinping {
+  background-image: url(http://rotervorhang.de/rotervorhang/wp-content/uploads/2012/12/XJP.jpg);
+}
+
+.nahyan {
+  background-image: url(http://2.bp.blogspot.com/-XNvXg83ZnqU/Uuz0FJ63nQI/AAAAAAAAB2k/RUXwz0bcJ4k/s1600/Capture.JPG);
+}
+
+.merkel {
+  background-image: url(http://www.extremnews.com/images/max_image_view-91eec3ea575847bcaee2136cbf44cbc3.jpg);
+}
+
+.mukherjee {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStVVcq61ca6FkpbLtSp0FuI77JdBR7J97ODOECkGr3c3cniKqs8Q);
+}
+
+.nieto {
+  background-image: url(http://arizonalatinos.com/wp-content/uploads/2013/03/Pena-Nieto.jpg);
+}
+
+.hollande {
+  background-image: url(https://lh3.googleusercontent.com/-1KT9xpMRobw/UtS17UydlYI/AAAAAAAAyv4/nRMjdPI3JOs/President-Francois-Hollande-wiki1.jpg);
+}
+
+.abe {
+  background-image: url(http://media0.faz.net/ppmedia/aktuell/2850013975/1.2205368/article_multimedia_overview/shinzo-abe-afrikas-reiche-rohstoffvorkommen-bieten-wichtige-geschaeftsmoeglichkeiten-fuer-das-rohstoffarme-japan.jpg);
+}
+
+.putin {
+  background-image: url(http://dyingrussia.files.wordpress.com/2013/03/putindm_468x658.jpg);
+}
+
+.reinfeldt {
+  background-image: url(http://cdn.c.photoshelter.com/img-get/I0000scjv2U8KsMY/s/750/750/Fredrik-Reinfeldt-2.jpg);
+}
+
+.zuma {
+  background-image: url(http://www.sahistory.org.za/sites/default/files/biography_pics/zuma-jacob.jpg);
+}
+
+.kirchner {
+  background-image: url(http://cancerul.net/wp-content/uploads/2011/12/cristina-kirchner.jpg);
+}
