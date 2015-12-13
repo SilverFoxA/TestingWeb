@@ -166,7 +166,7 @@
   display: block;
   float: left;
   position: relative;
-  width: 52px;
+  width: 40px;
   height: 52px;
   margin-left: 5px;
   margin-bottom: 15px;
@@ -313,7 +313,7 @@
   color: #b71c1c;
 }
 .material-card.Red .mc-footer a {
-  background-color: #b71c1c;
+/*  background-color: #b71c1c;*/
 }
 .material-card.Red.mc-active .mc-content {
   background-color: #ffebee;
@@ -361,7 +361,7 @@
   color: #263238;
 }
 .material-card.Blue-Grey .mc-footer a {
-  background-color: #263238;
+/*  background-color: #263238;*/
 }
 .material-card.Blue-Grey.mc-active .mc-content {
   background-color: #eceff1;
@@ -409,7 +409,7 @@
   color: #880e4f;
 }
 .material-card.Pink .mc-footer a {
-  background-color: #880e4f;
+/*  background-color: #880e4f;*/
 }
 .material-card.Pink.mc-active .mc-content {
   background-color: #fce4ec;
@@ -457,7 +457,7 @@
   color: #4a148c;
 }
 .material-card.Purple .mc-footer a {
-  background-color: #4a148c;
+/*  background-color: #4a148c;*/
 }
 .material-card.Purple.mc-active .mc-content {
   background-color: #f3e5f5;
@@ -505,7 +505,7 @@
   color: #311b92;
 }
 .material-card.Deep-Purple .mc-footer a {
-  background-color: #311b92;
+/*  background-color: #311b92;*/
 }
 .material-card.Deep-Purple.mc-active .mc-content {
   background-color: #ede7f6;
@@ -553,7 +553,7 @@
   color: #1a237e;
 }
 .material-card.Indigo .mc-footer a {
-  background-color: #1a237e;
+/*  background-color: #1a237e;*/
 }
 .material-card.Indigo.mc-active .mc-content {
   background-color: #e8eaf6;
@@ -601,7 +601,7 @@
   color: #0d47a1;
 }
 .material-card.Blue .mc-footer a {
-  background-color: #0d47a1;
+/*  background-color: #0d47a1;*/
 }
 .material-card.Blue.mc-active .mc-content {
   background-color: #e3f2fd;
@@ -649,7 +649,7 @@
   color: #01579b;
 }
 .material-card.Light-Blue .mc-footer a {
-  background-color: #01579b;
+/*  background-color: #01579b;*/
 }
 .material-card.Light-Blue.mc-active .mc-content {
   background-color: #e1f5fe;
@@ -697,7 +697,7 @@
   color: #006064;
 }
 .material-card.Cyan .mc-footer a {
-  background-color: #006064;
+/*  background-color: #006064;*/
 }
 .material-card.Cyan.mc-active .mc-content {
   background-color: #e0f7fa;
@@ -745,7 +745,7 @@
   color: #004d40;
 }
 .material-card.Teal .mc-footer a {
-  background-color: #004d40;
+/*  background-color: #004d40;*/
 }
 .material-card.Teal.mc-active .mc-content {
   background-color: #e0f2f1;
@@ -793,7 +793,7 @@
   color: #1b5e20;
 }
 .material-card.Green .mc-footer a {
-  background-color: #1b5e20;
+/*  background-color: #1b5e20;*/
 }
 .material-card.Green.mc-active .mc-content {
   background-color: #e8f5e9;
@@ -841,7 +841,7 @@
   color: #33691e;
 }
 .material-card.Light-Green .mc-footer a {
-  background-color: #33691e;
+/*  background-color: #33691e;*/
 }
 .material-card.Light-Green.mc-active .mc-content {
   background-color: #f1f8e9;
@@ -889,7 +889,7 @@
   color: #827717;
 }
 .material-card.Lime .mc-footer a {
-  background-color: #827717;
+/*  background-color: #827717;*/
 }
 .material-card.Lime.mc-active .mc-content {
   background-color: #f9fbe7;
@@ -937,7 +937,7 @@
   color: #f57f17;
 }
 .material-card.Yellow .mc-footer a {
-  background-color: #f57f17;
+/*  background-color: #f57f17;*/
 }
 .material-card.Yellow.mc-active .mc-content {
   background-color: #fffde7;
@@ -985,7 +985,7 @@
   color: #ff6f00;
 }
 .material-card.Amber .mc-footer a {
-  background-color: #ff6f00;
+/*  background-color: #ff6f00;*/
 }
 .material-card.Amber.mc-active .mc-content {
   background-color: #fff8e1;
@@ -1033,7 +1033,7 @@
   color: #e65100;
 }
 .material-card.Orange .mc-footer a {
-  background-color: #e65100;
+/*  background-color: #e65100;*/
 }
 .material-card.Orange.mc-active .mc-content {
   background-color: #fff3e0;
@@ -1081,7 +1081,7 @@
   color: #bf360c;
 }
 .material-card.Deep-Orange .mc-footer a {
-  background-color: #bf360c;
+/*  background-color: #bf360c;*/
 }
 .material-card.Deep-Orange.mc-active .mc-content {
   background-color: #fbe9e7;
@@ -1129,7 +1129,7 @@
   color: #3e2723;
 }
 .material-card.Brown .mc-footer a {
-  background-color: #3e2723;
+/*  background-color: #3e2723;*/
 }
 .material-card.Brown.mc-active .mc-content {
   background-color: #efebe9;
@@ -1177,7 +1177,7 @@
   color: #212121;
 }
 .material-card.Grey .mc-footer a {
-  background-color: #212121;
+/*  background-color: #212121;*/
 }
 .material-card.Grey.mc-active .mc-content {
   background-color: #fafafa;
@@ -1225,7 +1225,7 @@
   color: #263238;
 }
 .material-card.Blue-Grey .mc-footer a {
-  background-color: #263238;
+/*  background-color: #263238;*/
 }
 .material-card.Blue-Grey.mc-active .mc-content {
   background-color: #eceff1;
