@@ -3,7 +3,6 @@
 
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/style.css">
-    	<link rel="stylesheet" type="text/css" href="javascript.fullPage.css" />
   <link rel="stylesheet" href="css/normalize.css">
 
     
@@ -16,7 +15,7 @@
 html, body {
   height: 100%;
   width: 100%;
-  
+  background-color: black;
 }
 
 .container {
@@ -133,13 +132,6 @@ html, body {
 		abbr,acronym { border: 0;
 		}
 
-
-		/* Custom CSS
-		 * --------------------------------------- */
-		body{
-			font-family: arial,helvetica;
-			color: #F2F2F2;
-		}
 		h1{
 			font-size: 3em;
 		}
@@ -209,11 +201,6 @@ html, body {
 	</style>
     </head>
 <body>
-<!--
-    <div id="fullpage">
-	<div class="section " id="section9">
-		<div class="content">
--->
     <div class='container'>    
     	<div class='cube'>
 	        <div class='face front'>
@@ -290,21 +277,8 @@ html, body {
            <br><br>
             <font  id="some" size="4" style="margin-top:90%; text-align:center; margin-top:20px;"><a href="main.html"><font color="white">Enter the website</font></a></font>
             </div>
-<!--
-		</div>
-	</div>
-    </div>
--->
      <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="js/index.js"></script>
-
-<!--    <script type="text/javascript" src="javascript.fullPage.js"></script>-->
-<script type="text/javascript">
-	fullpage.initialize('#fullpage', {
-		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-		menu: '#menu',
-		css3:true
-	});
 
 </script>
     
@@ -315,16 +289,13 @@ $(document).ready(function(){
 
 	var shift = "";
 
-	//Input interaction
-	$('input[type="text"]').keyup(function(){
-		paint();
+    
+    paint();
 
-		var input = $(this).val();
+		var input = 'R2L2F2B2U2D2';
 				//Strip chars that would be impossibru and also whitespace
     parseMoves(input);
     
-	});
-	
 	//trigger keyup
 	$('input[type="text"]').keyup();
 
@@ -376,10 +347,10 @@ $(document).ready(function(){
 
 
 	
-	$('input[name="favcolor"]').change(function(){
-		c = $(this).val();
-		$('.sticker').css('box-shadow','0 5px 8px rgba(255,255,255,0.2) inset, inset 0 -5px 8px rgba(0,0,0,0.2), 0 0 0 5px '+c+' inset');
-	});
+//	$('input[name="favcolor"]').change(function(){
+//		c = $(this).val();
+//		$('.sticker').css('box-shadow','0 5px 8px rgba(255,255,255,0.2) inset, inset 0 -5px 8px rgba(0,0,0,0.2), 0 0 0 5px '+c+' inset');
+//	});
 
 });
 
