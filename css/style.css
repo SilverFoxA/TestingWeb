@@ -2460,7 +2460,7 @@ a#nextPage:hover, a#prePage:hover {
 
 }
 #left #map {
-  height: 388px;
+  height:   100%;
   position: relative;
   background-image: url("http://f.cl.ly/items/452R3S1440221Z3m372j/israel.png");
   background-size: cover;
