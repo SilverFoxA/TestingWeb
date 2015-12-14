@@ -1729,6 +1729,11 @@ float: left;
   float: right;
   font-size: 1.2rem;
 }
+@media all and (max-width: 780px) {
+  #polina {
+    width: auto;
+  }
+}
 #polina h1 {
     position: relative;
   font-size: 190%;
@@ -2499,14 +2504,14 @@ a#nextPage:hover, a#prePage:hover {
   right: -8px;
 }
 #left #map .map-locator {
-  position: absolute;
-  top: 40%;
-  left: 30%;
-  border-radius: 15px;
-  height: 30px;
-  width: 30px;
-  background: rgba(0, 0, 0, 0.4);
-  border: solid 2px white;
+    position: absolute;
+    top: 54%;
+    left: 56%;
+    border-radius: 15px;
+    height: 30px;
+    width: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    border: solid 2px white;
 }
 #left #map .map-locator:before {
   content: '';
