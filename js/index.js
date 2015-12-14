@@ -1,3 +1,4 @@
+//material user details icon
 $(function() {
         $('.material-card > .mc-btn-action').click(function () {
             var card = $(this).parent('.material-card');
@@ -27,8 +28,6 @@ $(function() {
             }
         });
     });   
-
-
 
 //(function($) {
 //
@@ -424,7 +423,7 @@ $(function() {
  * Updates: http://twitter.com/mrmidi
  * Licensed under the MIT, GPL licenses.
  */
-
+// parallax layered background
 (function ($, window, document, undefined) {
 
 	var pluginName = 'accelero';
@@ -786,7 +785,7 @@ $(function() {
 
 
 
-
+//navigation items
 $(function() {
   var $details = $('#section2 #details');
   var $nav = $('nav.greedy');
