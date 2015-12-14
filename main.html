@@ -554,13 +554,13 @@ On click the images will be displayed at normal size to complete the effect
 <!--Navigation-->
  <nav class='greedy' style="margin:0px;">
   <h1 id="tag">TeamKrishna</h1>
-  <ul class='links'>
-    <li class="active"><a href='#firstPage'>Home</a></li>
-    <li><a href='#secondPage'>About Us</a></li>
-    <li><a href='#3rdPage'>Team</a></li>
-    <li><a href='#4thpage'>Updates</a></li>
-    <li><a href='#joinus'>Join Us</a></li>
-    <li><a href='#lastPage'>Contact Us</a></li>
+  <ul class='links' id="menu">
+    <li data-menuanchor="firstPage" class="active"><a href='#firstPage'>Home</a></li>
+    <li data-menuanchor="secondPage"><a href='#secondPage'>About Us</a></li>
+    <li data-menuanchor="3rdPage"><a href='#3rdPage'>Team</a></li>
+    <li data-menuanchor="4thpage"><a href='#4thpage'>Updates</a></li>
+    <li data-menuanchor="joinus"><a href='#joinus'>Join Us</a></li>
+    <li data-menuanchor="lastPage"><a href='#lastPage'>Contact Us</a></li>
   </ul>
   <button>MENU</button>
   <ul class='hidden-links hidden'></ul>
@@ -1103,9 +1103,9 @@ pauseButton.addEventListener("click", function() {
 })
 </script>
         <!---Image gallery js -->
-      <script src="./js/imagegallery.js"></script>
+    <script src="./js/imagegallery.js"></script>
       <!---map-->
-      <script>
+    <script>
       //Inspired by a dribbble by Bluroon
 //https://dribbble.com/shots/1356864-Contact-Us
 
