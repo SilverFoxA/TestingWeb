@@ -8,6 +8,19 @@ nav.greedy {
     padding-right: 10px;
 /*  background: #ff9800;*/
 }
+
+
+/*
+@media all and (max-width: 780px) {
+    nav.greedy ul li a{
+    color: white;
+    }
+    #menu .active{
+    color: green;
+    }
+}
+*/
+
 nav.greedy h1 {
   display: flex;
   align-self: stretch;
@@ -117,11 +130,13 @@ html {
   background: #fefefe;
 }
 
+/*
 body {
-/*  padding: 2rem;*/
+  padding: 2rem;
     padding-right: 2%;
     padding-left: 2%;
 }
+*/
 
 h5 {
   text-align: center;
@@ -1710,6 +1725,7 @@ float: left;
   -webkit-transition: 1s opacity;
   transition: 1s opacity;
 }
+
 .stopfade { 
    opacity: .5;
 }
@@ -1725,6 +1741,7 @@ float: left;
     z-index: 5;
     margin-top: 65px;
     margin-right: 5%;
+     margin-left: 5%;
 /*  margin: 7%;*/
   float: right;
   font-size: 1.2rem;
